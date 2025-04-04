@@ -5,9 +5,12 @@ import paricipaImg from "../../assets/participa.png";
 import baloonImg from "../../assets/balloons_izquierda.png";
 import premiosImg from "../../assets/premios.png";
 import porductosImg from "../../assets/productos.png";
+import Footer from "../../components/footer/footer";
+import Navbar from "../../components/navbar/navbar";
 const Home = () => {
   return (
     <>
+    <Navbar></Navbar>
     <div className={styles.homeBackground}>
       <img
         src={titularImg}
@@ -37,6 +40,9 @@ const Home = () => {
       /> 
     </div>
 
+    <div className={styles.containerFooter}>
+      <Footer></Footer>     
+    </div> 
     </>
   );
 }

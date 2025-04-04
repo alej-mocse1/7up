@@ -1,0 +1,134 @@
+.container{
+    background-color: #00a651;
+}
+.navbarStyles{
+  background-color: #00a651;
+}
+
+.container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 170px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00a651;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .text {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
+  }
+  
+  .list {
+    margin: 20px 0;
+    padding-left: 20px;
+  }
+  
+  .list li {
+    margin-bottom: 10px;
+  }
+  
+  .list a {
+    color: #00a651;
+    text-decoration: none;
+  }
+  
+  .list a:hover {
+    text-decoration: underline;
+  }
+
+  .containImg{
+    position: absolute;
+    top: 65%;
+    left: 33%;
+    text-align: center;
+  }
+
+  .containImg2{
+    position: absolute;
+    top: 8%;
+    left: -20px;
+    text-align: center;
+  }
+
+  .ballonder2{
+    width: 50%;
+  }
+
+  
+  .containerFooter{
+    margin-top: 150px;
+  }
+
+
+  .titleImg{
+    font-size: 17%;
+  }
+
+
+  .containImg3{
+    position: absolute;
+    top: 65%;
+    right: 0%;
+    text-align: center;
+  }
+
+  .ballonder{
+    width: 50%;
+  }
+
+
+  .containImg4{
+    position: absolute;
+    top:78%;
+    left: 67%;
+    text-align: right;
+  }
+
+  .ballon1zq{
+    width: 80%;
+  }
+
+
+  @media (max-width: 768px) {
+
+
+    .containImg{
+      display: none;
+    }
+  
+    .containImg2{
+      display: none;
+    }
+    .containImg3{
+      display: none;
+    }
+    .containImg4{
+     display: none;
+    }
+
+    .titleImg{
+        width: 100%;
+    }
+
+     .text {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .container {
+        padding-bottom: 60px;
+    }
+    
+  }
