@@ -1,0 +1,302 @@
+@font-face {
+    font-family: 'Omnes';
+    src: url('../../fonts/Korolev Bold Compressed.otf') format('opentype'); /* Cambié 'truetype' a 'opentype' si es necesario */
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+
+.container{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00a651;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .title2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00a651;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+.titleImg{
+    width:  100%;
+  }
+
+.titleImg2{
+    width: 90%;
+  } 
+
+
+.p{
+  margin-top: 40px;
+  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+  letter-spacing: 1.4px;
+  color: white;
+  font-size: 34px;
+  text-align: center;
+}
+
+
+.containerFooter{
+  margin-top: -170px;
+  padding-top: 140px;
+  background-color: white;
+}
+
+.ballonder2{
+  position: absolute;
+  top: 13%;
+  right: 10%;
+  width: 10%;
+}
+
+.ballonder{
+  position: absolute;
+  bottom: 43%;
+  left: 10%;
+  width: 8%;
+}
+
+.ballon1zq{
+  position: absolute;
+  bottom: 16%;
+  right: 10%;
+  width: 8%;
+}
+
+.contentInputsCheck{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divChek{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+  letter-spacing: 1.4px;
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+  margin-top: 40px;
+}
+
+.divChek input{
+  margin-right: 10px;
+}
+
+.contentUserData{
+    width: 1100px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 200px;
+}
+
+.datosUserDiv{
+    width: 30%;
+    height: auto;
+    margin: 30px;
+}
+
+.datosUser{
+    background-color: yellow;
+    border-radius: 50px;
+    padding: 20px;
+    padding-top: 20px;
+    padding-left: 55px;
+    padding-right: 0px;
+    height: 200px; 
+    width: 100%;
+    text-align: left;
+
+}
+
+.datosUser h1{
+  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+  letter-spacing: 1.4px;
+  font-size: 60px;
+  position: relative;
+  top: -50px;
+}
+
+.datosUser .p1{
+  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+  letter-spacing: 1.4px;
+  font-size: 28px;
+  position: relative;
+  top: -100px;
+}
+
+.p2{
+  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+  letter-spacing: 1.4px;
+  font-size: 20px;
+  color: orange;
+  cursor: pointer;
+  position: relative;
+  top: -80px;
+}
+
+.datosVucherDiv{
+    width: 70%;
+    height: auto;
+    padding: 20px;
+    padding-left: 40px;
+    font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+    letter-spacing: 1.4px;
+
+    
+}
+
+.datosImg{
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border-radius: 50px;
+  text-align: left;
+  padding: 30px;
+  position: relative;
+  top: 5px;
+}
+
+.datosImg h1{
+  font-size: 60px;
+  position: relative;
+  top: -55px;
+}
+
+.datosImg p{
+  font-size: 60px;
+  font-size: 22px;
+  position: relative;
+  top: -100px;
+}
+
+
+
+
+
+@media (max-width: 1101px) {
+
+
+  .ballonder2{
+   display: none;
+  }
+  
+  .ballonder{
+    display: none;
+  }
+  
+  .ballon1zq{
+    display: none;
+  }
+
+  .productosImg{
+     position: relative;
+     right: 30px;
+     width: 200px;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .titleImg{
+    width: 30%;
+  } 
+
+  .titleImg2{
+    width: 30%;
+  } 
+
+  .p{
+    padding: 20px;
+  }
+  
+  .contentUserData{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+}
+
+
+.datosUserDiv{
+  width: 90%;
+  height: auto;
+  margin: 30px;
+}
+
+.datosUser{
+
+  width: 80%;
+  text-align: left;
+
+}
+
+/* .titleImg{
+  width:  30%;
+} */
+
+.title {
+  text-align: center;
+  padding-left: 0px;
+  margin-top: 0px;
+}
+
+/* .title2{
+  max-width:100%;
+} */
+
+
+.contentUserData{
+  position: relative;
+  right: 20px;
+
+}
+
+.datosImg h1{
+  margin-bottom: 80px;
+}
+}
+
+
+
+@media (max-width: 768px) {
+
+
+
+
+  .titleImg{
+    width: 90%;
+  } 
+
+  .titleImg2{
+    width: 90%;
+  } 
+
+
+  .productosImg{
+    position: relative;
+    right: 30px;
+    width: 290px;
+    top: -80px;
+ }
+}

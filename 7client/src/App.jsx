@@ -1,14 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
-import Navbar from './components/navbar/navbar';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './pages/home/home';
 import TyC from './pages/tyc/tyc';
-import Footer from './components/footer/footer';
 import InicioSesion from './pages/inicioSesion/inicioSesion';
 import Registro from './pages/registro/registro';
+import MiPerfil from './pages/miPerfil/miperfil';
+import SubirVoucher from './pages/subirVoucher/subirVoucher';
 
 
 function App() {
@@ -22,8 +20,8 @@ function App() {
           <Route path="/Tyc" element={<TyC/>} />
           <Route path="/inicioSesion" element={<InicioSesion/>} />
           <Route path="/Registro" element={<Registro />} />
-          {/* <Route path="/I" element={<I/>} />
-          <Route path="/D" element={<D/>} /> */}
+          <Route path="/miPerfil" element={<MiPerfil/>} />
+          <Route path="/SubirVoucher" element={<SubirVoucher/>} /> 
         </Routes>
       </BrowserRouter>
     
