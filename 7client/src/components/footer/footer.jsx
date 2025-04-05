@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.links}>
         <a href="#contacto">CONTACTO</a>
-        <a href="#terminos">TÉRMINOS Y CONDICIONES</a>
+        <a href="/tyc">TÉRMINOS Y CONDICIONES</a>
         <a href="#privacidad">AVISO DE PRIVACIDAD</a>
         <a href="#faqs">FAQ'S</a>
       </div>
