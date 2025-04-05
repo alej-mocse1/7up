@@ -2,16 +2,14 @@ import React from "react";
 import styles from "./subirVoucher.module.css";
 import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
-import iniImg from "../../assets/titSes.png"
+import iniImg from "../../assets/tit5.png"
 import Input from "../../components/inputs/input";
-import botonLog from "../../assets/boton.png"
+import botonLog from "../../assets/boton_cargar.png"
 import productosImg from "../../assets/productos.png";
 
 
 //importamos iconos
-import iconoSes from "../../assets/ico_nombre.png";
-import inconoPass from "../../assets/ico_contra.png";
-import inconoPassDer from "../../assets/ico_ojo.png";
+import espacio_stv from "../../assets/espacio_stv.png";
 
 //importamos las imagenes de corazones
 import ballonder2 from "../../assets/balloon_der2.png";
@@ -34,20 +32,20 @@ const SubirVoucher = () => {
 
                 <form className={styles.loginForm}>
                  
+                    <p className={styles.p}> 
+                      ¡Entre mas vouchers registres, más oportunidad tienes de ganar! 
+                    </p>
 
+                    <div className={styles.divUp}>
+                      <img src={espacio_stv} alt="espacio_stv" className={styles.espacio_stv} />
+                    </div>
 
-                    <h1 className={styles.title} style={{marginTop:"40px"}}>
+                    <h1 className={styles.title} style={{marginTop:"40px", cursor:"pointer"}}>
                         <img src={botonLog} alt="iniImg" className={styles.titleImg} />
                     </h1>
+ 
 
-                    <p 
-                      className={styles.p}> 
-                        Si no tienes un cuenta registrate
-                        <a 
-                            href=""
-                            className={styles.a}
-                            >Aqui</a>
-                   </p>
+
                 </form>
 
 
