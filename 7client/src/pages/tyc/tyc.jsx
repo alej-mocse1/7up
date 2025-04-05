@@ -10,7 +10,7 @@ import ballon1zq from "../../assets/balloon_izq.png";
 
 const TyC = () => {
   return (
-    <>
+    <div className={styles.tycBackground}>
     <div className={styles.container}>
         <div className={styles.navbarStyles}>
               <Navbar></Navbar>
@@ -79,7 +79,7 @@ const TyC = () => {
       <Footer></Footer>     
     </div> 
 
-    </>
+    </div>
 
   );
 };
