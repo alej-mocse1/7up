@@ -107,6 +107,17 @@
   }
 
 
+  @media (min-width: 1600px) {
+    .containImg{
+      top:62%;
+    }
+
+    .containerFooter{
+      margin-top: 300px;
+    }
+    
+  }
+
   @media (max-width: 768px) {
 
 
