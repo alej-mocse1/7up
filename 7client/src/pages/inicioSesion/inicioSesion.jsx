@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./InicioSesion.module.css";
+import styles from "./inicioSesion.module.css";
 import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
 import iniImg from "../../assets/titSes.png"
