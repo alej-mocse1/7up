@@ -7,6 +7,7 @@ import Input from "../../components/inputs/input";
 import botonLog from "../../assets/boton.png"
 import productosImg from "../../assets/productos.png";
 
+
 //importamos iconos
 import iconoSes from "../../assets/ico_nombre.png";
 import inconoPass from "../../assets/ico_contra.png";
