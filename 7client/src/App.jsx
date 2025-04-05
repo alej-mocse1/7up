@@ -8,6 +8,7 @@ import Home from './pages/home/home';
 import TyC from './pages/tyc/tyc';
 import Footer from './components/footer/footer';
 import InicioSesion from './pages/inicioSesion/inicioSesion';
+import Registro from './pages/registro/registro';
 
 
 function App() {
@@ -20,8 +21,8 @@ function App() {
           <Route path="/" element={<Home></Home>} />
           <Route path="/Tyc" element={<TyC/>} />
           <Route path="/inicioSesion" element={<InicioSesion/>} />
-          {/*<Route path="/L" element={<L/>} />
-          <Route path="/I" element={<I/>} />
+          <Route path="/Registro" element={<Registro />} />
+          {/* <Route path="/I" element={<I/>} />
           <Route path="/D" element={<D/>} /> */}
         </Routes>
       </BrowserRouter>
