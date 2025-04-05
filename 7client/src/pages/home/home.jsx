@@ -9,41 +9,41 @@ import Footer from "../../components/footer/footer";
 import Navbar from "../../components/navbar/navbar";
 const Home = () => {
   return (
-    <>
-    <Navbar></Navbar>
-    <div className={styles.homeBackground}>
+    <div className={styles.homeFondo}>
+      <Navbar></Navbar>
+      <div className={styles.homeBackground}>
+        <img
+          src={titularImg}
+          className={styles.titularImg}
+        />
+      </div>
+      <div className={styles.secondSection}>
+        <img
+          src={paricipaImg}
+          className={styles.participaImg}
+        />
+
+        <img
+          src={baloonImg}
+          className={styles.baloonImg}
+        />
+
+        <img
+          src={premiosImg}
+          className={styles.premiosImg}
+        />
+
+
       <img
-        src={titularImg}
-        className={styles.titularImg}
-      />
+          src={porductosImg}
+          className={styles.porductosImg}
+        /> 
+      </div>
+
+      <div className={styles.containerFooter}>
+        <Footer></Footer>     
+      </div> 
     </div>
-    <div className={styles.secondSection}>
-      <img
-        src={paricipaImg}
-        className={styles.participaImg}
-      />
-
-      <img
-        src={baloonImg}
-        className={styles.baloonImg}
-      />
-
-      <img
-        src={premiosImg}
-        className={styles.premiosImg}
-      />
-
-
-     <img
-        src={porductosImg}
-        className={styles.porductosImg}
-      /> 
-    </div>
-
-    <div className={styles.containerFooter}>
-      <Footer></Footer>     
-    </div> 
-    </>
   );
 }
 
