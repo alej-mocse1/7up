@@ -7,6 +7,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './pages/home/home';
 import TyC from './pages/tyc/tyc';
 import Footer from './components/footer/footer';
+import InicioSesion from './pages/inicioSesion/inicioSesion';
 
 
 function App() {
@@ -18,8 +19,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home></Home>} />
           <Route path="/Tyc" element={<TyC/>} />
-          {/*<Route path="/O" element={<O/>} />
-          <Route path="/L" element={<L/>} />
+          <Route path="/inicioSesion" element={<InicioSesion/>} />
+          {/*<Route path="/L" element={<L/>} />
           <Route path="/I" element={<I/>} />
           <Route path="/D" element={<D/>} /> */}
         </Routes>

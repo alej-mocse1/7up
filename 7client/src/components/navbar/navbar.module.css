@@ -14,6 +14,7 @@
     color:white;
     position: relative;
     font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+    z-index: 1000;
   }
   
   .navbar-logo img {
