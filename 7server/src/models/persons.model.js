@@ -30,15 +30,21 @@ const PersonSchema = {
   },
 
   lastName: {
-    allowNull: true,
+    allowNull: false,
     type: DataTypes.STRING,
     field: "phone", 
   },
 
   tel: {
-    allowNull: true,
+    allowNull: false,
     type: DataTypes.STRING,
     field: "phone", 
+  },
+
+  pass: {  
+    allowNull: false,
+    type: DataTypes.STRING,
+    field: "pass"
   },
 
   email: {  
@@ -50,10 +56,29 @@ const PersonSchema = {
     },
   },
 
+  privacidad: {  
+    allowNull: false,
+    type: DataTypes.BOOLEAN,
+    field: "privacidad",
+  },
+
+  Términosycondiciones: {  
+    allowNull: false,
+    type: DataTypes.BOOLEAN,
+    field: "Términosycondiciones",
+  },
+
+  recibirinformación: {  
+    allowNull: false,
+    type: DataTypes.BOOLEAN,
+    field: "recibirinformación",
+  },
+
+
   confirmEmail: {  
     allowNull: true,
     type: DataTypes.BOOLEAN,
-    field: "confrimEmail",
+    field: "confirmEmail",
   },
 
   totalPoints: {  

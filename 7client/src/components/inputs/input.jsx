@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./input.module.css"
 import iconoSes from "../../assets/ico_nombre.png";
-const Input = ({type,placeholder,iconoIzq,iconoDer}) => {
+const Input = ({type,placeholder,iconoIzq,iconoDer,handleChange,borderErr,msjErr}) => {
 
 
     return( 
@@ -13,6 +13,8 @@ const Input = ({type,placeholder,iconoIzq,iconoDer}) => {
                     name={type}
                     placeholder={placeholder}
                     className={styles.inputField}
+                    onChange={handleChange}
+                    style={{border: borderErr ? "2px solid red" : "1px solid white" }}
                  />
                
  
@@ -26,6 +28,8 @@ const Input = ({type,placeholder,iconoIzq,iconoDer}) => {
                                   <img src={iconoDer} alt={iconoDer} />
                                 </span>
                 }
+
+                {borderErr && <p style={{color:"red"}}>{msjErr}</p>}
 
             </div>          
         </div>
