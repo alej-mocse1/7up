@@ -1,12 +1,20 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./navbar.module.css"; // Importar estilos como módulo
-import Logo from "../../assets/logo.png"
+import Logo from "../../assets/logo.png";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+
+  const redirect = (param) => {
+    navigate(param)
   };
 
   return (
@@ -22,13 +30,17 @@ const Navbar = () => {
           isMenuOpen ? styles["menu-open"] : ""
         }`}
       >
-        <a href="#mecanica">Mecánica</a>
+        <Link to="/Tyc">Mecánica</Link>
+
         <a href="#premios">Premios</a>
+
         <a href="#ganadores">Ganadores</a>
-        <button className={`${styles.btn} ${styles["btn-login"]}`}>
+
+        <button className={`${styles.btn} ${styles["btn-login"]}`} onClick={() => redirect("/inicioSesion")}>
           Iniciar Sesión
         </button>
-        <button className={`${styles.btn} ${styles["btn-register"]}`}>
+
+        <button className={`${styles.btn} ${styles["btn-register"]}`} onClick={() => redirect("/Registro")}>
           Regístrate
         </button>
       </div>

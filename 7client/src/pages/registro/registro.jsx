@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./registro.module.css";
 import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
@@ -45,7 +46,9 @@ const Registro = () => {
       const [touchaceptaTerminos, setTouchaceptaTerminos] = useState(false);
       const [touchaceptaInfo, setTouchaceptaInfo] = useState(false);
 
+      const [Loading, setLoading] = useState(false);
 
+      const navigate = useNavigate();
       
       const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -60,8 +63,6 @@ const Registro = () => {
         if(name == "aceptaInfo")setTouchaceptaInfo(true)
       };
     
-      
-
       ///funciones para recolectar la info
       const handleName = (e) => {
         const { name, value } = e.target;
@@ -145,7 +146,8 @@ const Registro = () => {
       ///funcion para enviar la info al servidor
       const handleSubmit = async (e) => {
         e.preventDefault();
-
+        if(Loading)return
+        setLoading(true)
 
         let json = {
             name: formData.Nombres,
@@ -159,7 +161,7 @@ const Registro = () => {
           }
       
         try {
-          const response = await fetch("http://localhost:3000/user/createUser", {
+          const response = await fetch("https://7up-production.up.railway.app/user/createUser", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -173,24 +175,16 @@ const Registro = () => {
       
           const data = await response.json();
       
-          // Opcional: limpiar el formulario
-          setFormData({
-            Nombres: "",
-            Apellidos: "",
-            Correo: "",
-            Teléfono: "",
-            Contraseña: "",
-            confirmarContraseña: "",
-            aceptaPrivacidad: false,
-            aceptaTerminos: false,
-            aceptaInfo: false
-          });
+          setLoading(false)
+          navigate("/inicioSesion")
     
       
         } catch (error) {
           console.error("Error en el registro:", error);
+          setLoading(false)
           alert("Ocurrió un error al registrar. Intenta nuevamente.");
         }
+        
       };
 
 
@@ -390,11 +384,11 @@ const Registro = () => {
 
                     <p 
                       className={styles.p}> 
-                        Si no tienes un cuenta registrate
-                        <a 
-                            href=""
+                        Si tienes una cuenta registrate
+                        <Link
+                            to="/inicioSesion"
                             className={styles.a}
-                            >Aqui</a>
+                            >Aqui</Link>
                    </p>
                 </form>
 

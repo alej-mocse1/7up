@@ -1,17 +1,14 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./miperfil.module.css";
 import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
 import iniImg from "../../assets/tit3.png"
-import Input from "../../components/inputs/input";
 import botonLog from "../../assets/UpVouch.png"
 import productosImg from "../../assets/productos.png";
+import Swal from "sweetalert2";
 
 
-//importamos iconos
-import iconoSes from "../../assets/ico_nombre.png";
-import inconoPass from "../../assets/ico_contra.png";
-import inconoPassDer from "../../assets/ico_ojo.png";
 
 //importamos las imagenes de corazones
 import ballonder2 from "../../assets/balloon_der2.png";
@@ -21,6 +18,94 @@ import ballon1zq from "../../assets/balloon_izq.png";
 
 
 const MiPerfil = () => {
+    const [data, setData] = useState(false);
+    const [imgUser, setImgUser] = useState([]);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        try {
+            const storedData = localStorage.getItem("userData");
+            const dateUser = storedData ? JSON.parse(storedData) : null;
+            setData(dateUser);            
+        } catch (error) {
+            navigate("/Registro")
+        }
+
+    }, []);
+
+
+    useEffect(() => {
+
+      const fetchImage = async () => {
+        if (data.id) {
+          const json = {
+            userId: data.id,
+          };
+    
+          try {
+            const response = await fetch("https://7up-production.up.railway.app/img/getImgByidUser", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(json),
+            });
+    
+            const result = await response.json();
+            console.log("imagenes del usuario", result);
+            setImgUser(result.data)
+          } catch (error) {
+            console.error("Error en el registro:", error);
+          }
+        }
+      };
+    
+      fetchImage();
+
+  }, [data.id]);
+
+
+      const redirect = (param) => {
+        navigate(param)
+      };
+
+
+      const deleteUser = async() => {
+
+        let json = {
+            id: data.id,
+          }
+      
+        try {
+          const response =  await fetch("https://7up-production.up.railway.app/user/deleteUser", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(json),
+          });
+      
+      
+          const data = await response.json();
+
+          console.log("data GET INFO USER",data);
+          localStorage.setItem("userData", JSON.stringify(data.data));
+
+          if(data?.message == "User deleted" ) navigate("/Registro")
+    
+      
+        } catch (error) {
+          console.error("Error en el registro:", error);
+          Swal.fire(
+            "¡UPPPSS!",
+            "Error al eliminar el usuario",
+            "error"
+          );
+        }
+      };
+
+
+
 
 
     return( 
@@ -42,21 +127,50 @@ const MiPerfil = () => {
                 <div className={styles.contentUserData}>
                     <div className={styles.datosUserDiv}>
                         <div className={styles.datosUser}>
-                            <h1>USER</h1>
-                            <p className={styles.p1}>last name</p>
+                            <h1>{data?.name?.split(" ")[0]}</h1>
+                            <p className={styles.p1}>{data?.lastName}</p>
 
-                            <p className={styles.p2}>Eliminar cuenta</p>
+                            <p className={styles.p2} onClick={deleteUser}>Eliminar cuenta</p>
                         </div>
 
                         <h1 className={styles.title2} style={{cursor:"pointer"}}>
-                            <img src={botonLog } alt="iniImg" className={styles.titleImg2} />
+                            <img src={botonLog } alt="iniImg" className={styles.titleImg2} onClick={() => redirect("/SubirVoucher")} />
                         </h1>
                     </div>
 
                     <div className={styles.datosVucherDiv}>
                       <div className={styles.datosImg}>
-                        <h1>Llevas 3 voucher subidos</h1>
+                      <h1>Llevas {imgUser?.length  >  0 ? imgUser?.length   : 0 } voucher subidos</h1>
                         <p className={styles.p1}>¡Entre mas vouchers registres , más oportunidad tienes de ganar!</p>
+
+
+                        <div
+                            // style={{
+                            //   width: '300px',
+                            //   overflowX: 'auto',
+                            //   display: 'flex',
+                            //   flexDirection: 'row-reverse', // derecha a izquierda
+                            //   gap: '10px',
+                            //   padding: '10px',
+                            //   border: '1px solid #ccc',
+                            //   borderRadius: '8px',
+                            // }}
+                            className={styles.containImgs}
+                          >
+                            {imgUser.map((el, index) => (
+                              <img
+                                key={index}
+                                src={el.img} // o solo el.img si es una URL
+                                alt={`Imagen ${index + 1}`}
+                                style={{
+                                  width: '200px',
+                                  height: 'auto',
+                                  borderRadius: '8px',
+                                  flexShrink: 0, // evita que se redimensionen
+                                }}
+                              />
+                            ))}
+                          </div>
                       </div>
                     </div>
 
@@ -75,7 +189,8 @@ const MiPerfil = () => {
             <div className={styles.containerFooter}>
                 <Footer></Footer>     
             </div>  
-             
+
+                        
              
              <img src={ballonder2} alt="ballonder2" className={styles.ballonder2} />
              <img src={ballonder} alt="ballonder3" className={styles.ballonder} />

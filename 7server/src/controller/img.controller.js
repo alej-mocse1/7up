@@ -19,6 +19,18 @@ const createImg = async (req, res) => {
 
     const newImg = await models.Img.create(req.body);
 
+    const person = await models.Person.findOne({
+      where: {
+        id: userId
+      },
+    });
+    
+    if (person) {
+      person.totalPoints = person.totalPoints + 1;
+      await person.save(); // ✅ Guardás los cambios en la base de datos
+    }
+
+
     res.json({ success: true, data: newImg });
 
   } catch (error) {
@@ -27,6 +39,26 @@ const createImg = async (req, res) => {
 };
 
 
+
+const getImgByidUser = async (req, res) => {
+  try {
+
+    const { userId } = req.body;
+
+    // Verificar si el usuario ya cargó la misma imagen
+    const totalImgs = await models.Img.findAll({
+      where: { userId:userId },
+    });
+
+
+    res.json({ success: true, data: totalImgs });
+
+  } catch (error) {
+    res.status(500).send({ success: false, message: error.message });
+  }
+};
+
 module.exports = {
-    createImg
+    createImg,
+    getImgByidUser
 };

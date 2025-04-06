@@ -32,7 +32,7 @@ const PersonSchema = {
   lastName: {
     allowNull: false,
     type: DataTypes.STRING,
-    field: "phone", 
+    field: "lastName", 
   },
 
   tel: {

@@ -29,7 +29,7 @@ const Input = ({type,placeholder,iconoIzq,iconoDer,handleChange,borderErr,msjErr
                                 </span>
                 }
 
-                {borderErr && <p style={{color:"red"}}>{msjErr}</p>}
+                {borderErr && <p className={styles.Perr}>{msjErr}</p>}
 
             </div>          
         </div>

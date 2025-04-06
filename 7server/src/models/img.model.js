@@ -25,7 +25,7 @@ const ImgSchema = {
 
   img: {
     allowNull: false,
-    type: DataTypes.STRING,
+    type: DataTypes.TEXT, 
     field: "img_voucher",
   },
   

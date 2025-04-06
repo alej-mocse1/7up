@@ -1,74 +1,170 @@
-import React from "react";
+import React, { useState,useRef,useEffect} from "react";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./subirVoucher.module.css";
 import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
-import iniImg from "../../assets/tit5.png"
-import Input from "../../components/inputs/input";
-import botonLog from "../../assets/boton_cargar.png"
+import iniImg from "../../assets/tit5.png";
+import botonLog from "../../assets/boton_cargar.png";
 import productosImg from "../../assets/productos.png";
-
-
-//importamos iconos
 import espacio_stv from "../../assets/espacio_stv.png";
-
-//importamos las imagenes de corazones
 import ballonder2 from "../../assets/balloon_der2.png";
 import ballonder from "../../assets/balloon_der.png";
 import ballon1zq from "../../assets/balloon_izq.png";
-
-
+import Swal from "sweetalert2";
 
 const SubirVoucher = () => {
+  const [imagenBase64, setImagenBase64] = useState(null);
+  const [data, setData] = useState(false);
+  const navigate = useNavigate();
 
+  const inputRef = useRef(null);
 
-    return( 
-        <div className={styles.Fondo}>
-            <Navbar></Navbar>
-               
-            <div className={styles.container}>
-                <h1 className={styles.title}>
-                    <img src={iniImg} alt="iniImg" className={styles.titleImg} />
-                </h1>
+  
+ useEffect(() => {
+          try {
+              const storedData = localStorage.getItem("userData");
+              const dateUser = storedData ? JSON.parse(storedData) : null;
+              setData(dateUser);            
+          } catch (error) {
+              navigate("/Registro")
+          }
+    }, []);
+  
 
-                <form className={styles.loginForm}>
-                 
-                    <p className={styles.p}> 
-                      ¡Entre mas vouchers registres, más oportunidad tienes de ganar! 
-                    </p>
+  const handleImagenChange = (e) => {
+    console.log("data",data);
+    
+    const file = e.target.files[0];
+    if (!file) return;
 
-                    <div className={styles.divUp}>
-                      <img src={espacio_stv} alt="espacio_stv" className={styles.espacio_stv} />
-                    </div>
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setImagenBase64(reader.result); // esto es la imagen en base64
+    };
+    reader.readAsDataURL(file);
+  };
 
-                    <h1 className={styles.title} style={{marginTop:"40px", cursor:"pointer"}}>
-                        <img src={botonLog} alt="iniImg" className={styles.titleImg} />
-                    </h1>
- 
+  const handleClickImagen = () => {
+    inputRef.current.click(); // activa el input escondido
+  };
 
+  ///funcion para enviar la info al servidor
+  const enviarImagen = async (e) => {     
+        
+            if (!imagenBase64) {
+                alert("Por favor selecciona una imagen antes de enviar.");
+                return;
+            }
+           
+            let json = {
+                userId: data.id,
+                img: imagenBase64
+              }
+          
+            try {
+              const response = await fetch("https://7up-production.up.railway.app/img/createImg", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(json),
+              });
+          
+              const data = await response.json();
 
-                </form>
+              if(data.success) navigate("/miPerfil")
 
+              if(data.message == 'El usuario ya cargó esta imagen previamente.'){
+                Swal.fire(
+                    "¡UPPPSS!",
+                    "ya cargó esta imagen previamente.",
+                    "error"
+                );
+              }
 
-                <div >
-                    <h1 className={styles.title} style={{marginTop:"40px"}}>
-                        <img
-                            src={productosImg}
-                            className={styles.productosImg}
-                            />                 
-                    </h1>
-                </div>
+              console.log("data",data);
+              
+            } catch (error) {
+              console.error("Error en el registro:", error);
+              Swal.fire(
+                "¡UPPPSS!",
+                "Algo salió mal",
+                "error"
+            );
+              setLoading(false)
+            }
+            
+ };
+    
+
+  return (
+    <div className={styles.Fondo}>
+      <Navbar />
+
+      <div className={styles.container}>
+        <h1 className={styles.title}>
+          <img src={iniImg} alt="iniImg" className={styles.titleImg} />
+        </h1>
+
+        <form className={styles.loginForm}>
+          <p className={styles.p}>
+            ¡Entre más vouchers registres, más oportunidad tienes de ganar!
+          </p>
+
+          <div className={styles.divUp}>
+          <img
+                src={espacio_stv}
+                alt="espacio_stv"
+                className={styles.espacio_stv}
+                onClick={handleClickImagen}
+                style={{ cursor: "pointer" }} // buena UX
+            />
+         </div>
+
+          {/* Input para subir imagen */}
+          <input
+                type="file"
+                accept="image/*"
+                ref={inputRef}
+                onChange={handleImagenChange}
+                style={{ display: "none" }}
+            />
+
+          <h1 className={styles.title} style={{ marginTop: "40px", cursor: "pointer",}}>
+            <img 
+             src={botonLog}
+             alt="boton cargar"
+             className={styles.titleImg} 
+             onClick={enviarImagen}
+             />
+          </h1>
+
+          
+          {/* Mostrar imagen previa */}
+          {imagenBase64 && (
+            <div style={{ marginTop: "20px", maxWidth:"90%" }}>
+              {/* <p style={{ color: "" }}>Previsualización:</p> */}
+              <img src={imagenBase64} alt="preview" style={{ maxWidth: "100%", maxHeight: "300px", border:"2px solid white"  }} />
             </div>
-            <div className={styles.containerFooter}>
-                <Footer></Footer>     
-            </div>  
-             
-             
-             <img src={ballonder2} alt="ballonder2" className={styles.ballonder2} />
-             <img src={ballonder} alt="ballonder3" className={styles.ballonder} />
-             <img src={ballon1zq} alt="ballon1zq" className={styles.ballon1zq} />
+          )}
+        </form>
+
+        <div>
+          <h1 className={styles.title} style={{ marginTop: "40px" }}>
+            <img src={productosImg} className={styles.productosImg} />
+          </h1>
+        </div>
       </div>
-    )
-}
 
+      <div className={styles.containerFooter}>
+        <Footer />
+      </div>
 
-export default SubirVoucher
+      <img src={ballonder2} alt="ballonder2" className={styles.ballonder2} />
+      <img src={ballonder} alt="ballonder3" className={styles.ballonder} />
+      <img src={ballon1zq} alt="ballon1zq" className={styles.ballon1zq} />
+    </div>
+  );
+};
+
+export default SubirVoucher;
