@@ -19,10 +19,14 @@
   }
 
 
-.titleImg{
-    font-size: 17%;
+  .titleImg2{
+    width: 100%;
   }
-
+  
+  
+  .titleImg{
+      width: 13%;
+    }
 
 .loginForm{
     display: flex;

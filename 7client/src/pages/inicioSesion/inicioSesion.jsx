@@ -159,7 +159,7 @@ const InicioSesion = () => {
                         <img 
                           src={botonLog} 
                           alt="iniImg" 
-                          className={styles.titleImg} 
+                          className={styles.titleImg2} 
                     
                           onClick={isFormValid() ? handleSubmit : null}
                           style={{

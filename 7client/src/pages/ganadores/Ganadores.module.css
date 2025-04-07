@@ -34,6 +34,15 @@
       top: 40px;
     }
 
+    .titleImg2{
+      width: 100%;
+    }
+    
+    
+    .titleImg{
+        width: 13%;
+      }
+
     .title {
       font-size: 24px;
       font-weight: bold;

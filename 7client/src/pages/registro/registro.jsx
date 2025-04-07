@@ -381,7 +381,7 @@ const Registro = () => {
                         <img 
                           src={botonLog} 
                           alt="iniImg" 
-                          className={styles.titleImg}
+                          className={styles.titleImg2}
                           onClick={isFormValid() ? handleSubmit : null}
                           style={{
                             filter: isFormValid() ? "none" : "grayscale(100%)",
