@@ -20,13 +20,11 @@ const Ganadores = () => {
             <h1 className={styles.title}>
                 <img src={title} alt="title" className={styles.titleImg} />
             </h1>
-            <Link to="/inicioSesion" style={{textDecoration:"none"}}>
                 <p className={styles.text}>
-                    Muy pronto tendremos aquí a los ganadores de nuestra promoción. Mientras tanto sigue participando
+                    Muy pronto tendremos aquí a los ganadores de nuestra promoción. 
+                    <br />
+                    Mientras tanto <a href="inicioSesion">sigue participando</a> 
                 </p>
-
-                <br />  <br />  <br />  <br />  <br />  <br />  <br />  <br />  <br />  <br />  <br />
-            </Link> 
         </div>
     </div>
 

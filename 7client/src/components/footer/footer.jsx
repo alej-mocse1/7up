@@ -10,11 +10,8 @@ const Footer = () => {
 
     <footer className={styles.footer}>
       <div className={styles.links}>
-         {/* <a href="#contacto">CONTACTO</a> */}
          <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
          <Link to="/Priv">AVISO DE PRIVACIDAD</Link>
-         {/*<a href="#faqs">FAQ'S</a> */}
-         {/* <a href="#faqs">new</a> */}
       </div>
       <p className={styles.promotion}>
       *Promoción válida del 7 de abril al 19 de mayo de 2025. Nada que comprar para participar.

@@ -4,11 +4,11 @@
   }
   
   .container{
-      background-color: #00a651;
+      background-color: #32ab56; 
   }
   
   .navbarStyles{
-    background-color: #00a651;
+    background-color: #32ab56;
   }
   
   .container {
@@ -17,12 +17,25 @@
       color: #333;
       line-height: 1.6;
       padding-bottom: 170px;
+      border: 1px solid black;
+    }
+
+
+    .container2 {
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      padding-bottom: 100px;
+      max-height: 100vh;
+      overflow-y: auto; /* 👈 esto permite el scroll vertical */
+      margin-bottom: 100px;
     }
     
     .title {
       font-size: 24px;
       font-weight: bold;
-      color: #00a651;
+      color: #32ab56;
       margin-bottom: 20px;
       text-align: center;
     }
@@ -46,7 +59,7 @@
     }
     
     .list a {
-      color: #00a651;
+      color: #32ab56;
       text-decoration: none;
     }
     

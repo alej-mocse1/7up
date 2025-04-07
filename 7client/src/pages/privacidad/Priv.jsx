@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Priv.module.css';
 import Navbar from '../../components/navbar/navbar';
 import title from "../../assets/titulo_adp.png";
@@ -9,13 +9,18 @@ import ballonder from "../../assets/balloon_der.png";
 import ballon1zq from "../../assets/balloon_izq.png";
 
 const Priv = () => {
+
+        useEffect(() => {
+            window.scrollTo(0, 0);
+          }, []);
+
   return (
     <div className={styles.tycBackground}>
     <div className={styles.container}>
         <div className={styles.navbarStyles}>
               <Navbar></Navbar>
         </div> 
-        <div className={styles.container}>
+        <div className={styles.container2}>
             <h1 className={styles.title}>
                 <img src={title} alt="title" className={styles.titleImg} />
             </h1>

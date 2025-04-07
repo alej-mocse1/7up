@@ -134,10 +134,10 @@
     .navbar-links {
       position: absolute;
       top: 0;
-      left: 0; /* Cambiado de right: 0 a left: 0 */
+      left: 0; /* Cambiado de right: 0 a left: 0 */ 
       height: 100vh;
       width: 250px;
-      background-color: #00a94f;
+      background-color: #32ab56;
       flex-direction: column;
       justify-content: center;
       align-items: center;
