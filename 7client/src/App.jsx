@@ -8,6 +8,8 @@ import Registro from './pages/registro/registro';
 import MiPerfil from './pages/miPerfil/miperfil';
 import SubirVoucher from './pages/subirVoucher/subirVoucher';
 import CorreoOk from './pages/correoOk/correo';
+import Priv from './pages/privacidad/Priv';
+import Ganadores from './pages/ganadores/Ganadores';
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
           <Route path="/miPerfil" element={<MiPerfil/>} />
           <Route path="/SubirVoucher" element={<SubirVoucher/>} /> 
           <Route path="/validate" element={<CorreoOk/>} />
+          <Route path="/Priv" element={<Priv/>} />
+          <Route path="/Ganadores" element={<Ganadores/>} />
         </Routes>
       </BrowserRouter>
     

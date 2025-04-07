@@ -64,7 +64,7 @@ const Navbar = () => {
 
         <a href="#premios">Premios</a>
 
-        <a href="#ganadores">Ganadores</a>
+        <Link to="/ganadores">Ganadores</Link>
 
         <button className={`${styles.btn} ${styles["btn-login"]}`} onClick={() => redirect("/inicioSesion")}>
            {userData?.id ? "perfil" : "Iniciar Sesión"} 
