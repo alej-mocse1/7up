@@ -41,7 +41,7 @@ const InicioSesion = () => {
           "Correo": value
         }));
 
-        setTouchCorreo(true)
+
 
 
       };
@@ -54,8 +54,7 @@ const InicioSesion = () => {
           "Contraseña": value
         }));
 
-        setTouchContraseña(true)
-
+ 
 
       };
 
