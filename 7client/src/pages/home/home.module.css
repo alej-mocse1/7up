@@ -127,8 +127,8 @@
         width: 50%;
         height: auto;
         position: absolute;
-        bottom: 0;
-        left: 0;
+        bottom: -20;
+        left: 10px;
     }
 
   }

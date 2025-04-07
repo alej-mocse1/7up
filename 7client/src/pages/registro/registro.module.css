@@ -106,6 +106,13 @@
   margin-right: 10px;
 }
 
+
+.productosImg{
+  
+  position: relative;
+  right: 120px;
+}
+
 @media (max-width: 768px) {
 
 
@@ -123,7 +130,7 @@
 
   .productosImg{
      position: relative;
-     right: 30px;
+     right: 120px;
      width: 200px;
   }
 

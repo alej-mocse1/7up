@@ -43,12 +43,28 @@ const Navbar = () => {
   }, []);
 
 
+  
+  const goToSection = (id) => {
+    localStorage.setItem('scrollTo', id); // Guardamos la sección
+    navigate('/'); // Navegamos al home
+  };
+
+
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+
+
+    if (window.location.pathname !== '/') {
+      localStorage.setItem('scrollTo', id); // Guardamos la sección
+      navigate('/'); // Navegamos al home
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+         element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
+
+
 
   return (
     <div className={styles.navbar}>
@@ -66,9 +82,8 @@ const Navbar = () => {
           isMenuOpen ? styles["menu-open"] : ""
         }`}
       >
-        <a onClick={() => scrollToSection('mec')} style={{cursor:"pointer"}}>Mecánica</a>
-
-        <a onClick={() => scrollToSection('premios')} style={{cursor:"pointer"}}>Premios</a>
+      <a onClick={() => scrollToSection('mec')} style={{ cursor: 'pointer' }}>Mecánica</a>
+      <a onClick={() => scrollToSection('premios')} style={{ cursor: 'pointer' }}>Premios</a>
 
         <Link to="/ganadores">Ganadores</Link>
 

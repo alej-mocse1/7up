@@ -17,6 +17,8 @@ function App() {
   return (
     <div style={{position:"relative"}}>
      {/* <Navbar></Navbar> */}
+
+     <div style={{height:"160px" , backgroundColor:"#32ab56"}} className='divSpac'></div>
      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home></Home>} />

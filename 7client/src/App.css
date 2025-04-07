@@ -14,3 +14,10 @@ body{
 .swal-custom-font {
     font-size: 28px !important;
   }
+
+
+  @media (max-width: 768px) {
+     .divSpac{
+      display: none;
+     }
+  }

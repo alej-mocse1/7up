@@ -9,6 +9,23 @@ import Footer from "../../components/footer/footer";
 import Navbar from "../../components/navbar/navbar";
 const Home = () => {
 
+
+  useEffect(() => {
+    const sectionId = localStorage.getItem('scrollTo');
+    if (sectionId) {
+      const scrollTo = () => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+        localStorage.removeItem('scrollTo'); // Limpiamos después de hacer scroll
+      };
+
+      // Esperamos un poco para asegurar que el DOM ya está montado
+      setTimeout(scrollTo, 300);
+    }
+  }, []);
+
   return (
     <div className={styles.homeFondo}>
       <Navbar></Navbar>

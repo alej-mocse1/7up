@@ -5,6 +5,7 @@
   
   .container{
       background-color: #32ab56;
+      margin-top: 10px;
   }
   
   .navbarStyles{
@@ -12,7 +13,7 @@
   }
   
   .container {
-      padding: 20px;
+      /* padding: 20px; */
       font-family: Arial, sans-serif;
       color: #333;
       line-height: 1.6;
@@ -21,6 +22,18 @@
       margin-bottom: 100px;
     }
     
+    .container2 {
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      padding-bottom: 170px;
+      height: 1;
+      margin-bottom: 0px;
+      position: relative;
+      top: 40px;
+    }
+
     .title {
       font-size: 24px;
       font-weight: bold;
@@ -60,13 +73,13 @@
     .containImg{
       position: absolute;
       top: 0%;
-      left: 26%;
+      left: 33%;
       text-align: center;
     }
   
     .containImg2{
       position: absolute;
-      top: 8%;
+      top: 18%;
       left: -20px;
       text-align: center;
     }
@@ -149,6 +162,18 @@
   
       .container {
           padding-bottom: 60px;
+          min-height: 140%;
+          min-height: 100vh;
+      }
+
+      .container2{
+         top: 100px;
+
       }
       
+      .navbarStyles{
+        background-color: #32ab56;
+        position: relative;
+        top: -10px;
+      }
     }

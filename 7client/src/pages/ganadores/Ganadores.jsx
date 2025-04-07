@@ -16,7 +16,7 @@ const Ganadores = () => {
         <div className={styles.navbarStyles}>
               <Navbar></Navbar>
         </div> 
-        <div className={styles.container}>
+        <div className={styles.container2}>
             <h1 className={styles.title}>
                 <img src={title} alt="title" className={styles.titleImg} />
             </h1>

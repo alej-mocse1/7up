@@ -13,19 +13,20 @@
     padding-left: 6%;
     padding-right: 6%;
     color:white;
-    position: relative;
     font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
     z-index: 1000;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    border: 1px solid black;
     background-color: transparent;
     background-color: rgba(202, 198, 198, 0.3); /* Fondo oscuro semitransparente */
     backdrop-filter: blur(10px); /* Difuminado suave */
     -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea sutil abajo */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+
+  
   }
   
   .navbar-logo img {
@@ -142,7 +143,10 @@
     .navbar {
       padding: 0;
       left: 0;
+
     }
+
+
 
     .navbar-links {
       position: absolute;

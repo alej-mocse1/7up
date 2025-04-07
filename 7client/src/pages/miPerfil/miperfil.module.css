@@ -23,7 +23,7 @@
     text-align: center;
   }
 
-  .title2 {
+.title2 {
     font-size: 24px;
     font-weight: bold;
     color: #32ab56;
@@ -203,6 +203,11 @@
   height: 200px;
 }
 
+.productosImg{
+  
+  position: relative;
+  right: 120px;
+}
 
 
 
@@ -310,7 +315,7 @@
 
   .productosImg{
     position: relative;
-    right: 30px;
+    right: 90px;
     width: 290px;
     top: -80px;
  }
