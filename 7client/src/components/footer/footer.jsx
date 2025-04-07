@@ -15,12 +15,12 @@ const Footer = () => {
         <a href="#faqs">FAQ'S</a>
       </div>
       <p className={styles.promotion}>
-        *Promoción válida del 7 de abril al 9 de mayo de 2025. Válida solo para mayores de edad. Válida para residentes <br></br> de México. Consulta bases y reglas en <a href="www.7uppr.com">www.7uppr.com</a>.
+      *Promoción válida del 7 de abril al 19 de mayo de 2025. Nada que comprar para participar. Válida para residentes de Puerto Rico. Consulta las reglas en 7uppr.com
       </p>
       <div className={styles.social}>
         <div className={styles.socialIcons}>
             <span>Síguenos</span>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/7UPPR" target="_blank" rel="noopener noreferrer">
             <img src={logoFb} alt="Facebook" />
             </a>
         </div>

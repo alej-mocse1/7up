@@ -73,15 +73,16 @@
     text-transform: uppercase; /* Convierte el texto a mayúsculas */
     cursor: pointer;
     white-space: nowrap;
+    margin-bottom: 3px;
   }
   
   .btn-register {
-    background-color: #ff4500;
+    background-color: #ff7900;
     color: white;
     margin-left: 30px;
     padding: 6px;
     border-radius: 10px;
-    border: 2px solid #ff4500;
+    border: 2px solid #ff7900;
     font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
     font-weight: 800;
     font-size: 24px;
@@ -90,6 +91,8 @@
     padding-right: 30px;
     padding-left: 30px;
     cursor: pointer;
+    margin-bottom: 3px;
+
   }
   
   

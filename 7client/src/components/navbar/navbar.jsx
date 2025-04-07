@@ -48,17 +48,19 @@ const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles["navbar-logo"]}>
+      <Link to="/">
         <img
           src={Logo}
           alt="7UP Logo"
         />
+        </Link>
       </div>
       <div
         className={`${styles["navbar-links"]} ${
           isMenuOpen ? styles["menu-open"] : ""
         }`}
       >
-        <Link to="/Tyc">Mecánica</Link>
+        <a href="#mec">Mecánica</a>
 
         <a href="#premios">Premios</a>
 

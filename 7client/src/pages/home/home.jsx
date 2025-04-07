@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import styles from "./home.module.css"; 
 import titularImg from "../../assets/titular.png";
 import paricipaImg from "../../assets/participa.png";
@@ -8,6 +8,7 @@ import porductosImg from "../../assets/productos.png";
 import Footer from "../../components/footer/footer";
 import Navbar from "../../components/navbar/navbar";
 const Home = () => {
+
   return (
     <div className={styles.homeFondo}>
       <Navbar></Navbar>
@@ -17,7 +18,7 @@ const Home = () => {
           className={styles.titularImg}
         />
       </div>
-      <div className={styles.secondSection}>
+      <div className={styles.secondSection} id="mec">
         <img
           src={paricipaImg}
           className={styles.participaImg}
@@ -31,6 +32,7 @@ const Home = () => {
         <img
           src={premiosImg}
           className={styles.premiosImg}
+          id="premios"
         />
 
 
