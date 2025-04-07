@@ -19,6 +19,7 @@ import iconoTel from  "../../assets/ico_telefono.png";
 import ballonder2 from "../../assets/balloon_der2.png";
 import ballonder from "../../assets/balloon_der.png";
 import ballon1zq from "../../assets/balloon_izq.png";
+import Swal from "sweetalert2";
 
 
 
@@ -176,7 +177,17 @@ const Registro = () => {
           const data = await response.json();
       
           setLoading(false)
-          navigate("/inicioSesion")
+
+
+          Swal.fire({
+            title: "¡Listo!",
+            text: "Para culminar tu registro, revisa el email que acabamos de enviarte y sigue las instrucciones.",
+            icon: "success",
+            confirmButtonText: "OK"
+          }).then(() => {
+            navigate("/inicioSesion");
+          });
+          
     
       
         } catch (error) {

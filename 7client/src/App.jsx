@@ -7,6 +7,7 @@ import InicioSesion from './pages/inicioSesion/inicioSesion';
 import Registro from './pages/registro/registro';
 import MiPerfil from './pages/miPerfil/miperfil';
 import SubirVoucher from './pages/subirVoucher/subirVoucher';
+import CorreoOk from './pages/correoOk/correo';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Registro" element={<Registro />} />
           <Route path="/miPerfil" element={<MiPerfil/>} />
           <Route path="/SubirVoucher" element={<SubirVoucher/>} /> 
+          <Route path="/validate" element={<CorreoOk/>} />
         </Routes>
       </BrowserRouter>
     

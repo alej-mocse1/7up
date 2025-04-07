@@ -42,13 +42,13 @@ const create = async (req, res) => {
                 <b style="font-size: 30px; margin: 0 0 10px; color: #ffdd00;">${newPerson.name}</b>
                 <br>
                 <p style="font-size: 18px; margin: 0 0 10px; color: white;">PARA COMPLETAR TU REGISTRO,<br> DA CLICK EN EL ENLACE QUE APARECE A CONTINUACIÓN.</p>
-                <a href="https://7up-sandy.vercel.app/inicioSesion" target="_blank" style="display: inline-block; text-decoration: none;">
+                <a href="https://7up-sandy.vercel.app/validate" target="_blank" style="display: inline-block; text-decoration: none;">
                   <img src="https://dim.mcusercontent.com/cs/2355be6a925123667641e4551/images/c0d528b5-ad70-af56-213c-ac5b70edfaae.png?w=561&dpr=2" alt="Confirma tu cuenta" width="250" style="margin: 20px 0;">
                 </a>
                 <p style="font-size: 18px; margin: 0 0 10px; color: white;">SI NO PUEDES DAR CLICK EN EL LINK,<br>
                 COPIA Y PEGA EL SIGUIENTE VÍNCULO EN TU EXPLORADOR:</p>
                 <p style="font-size: 14px; color: #ffffff; word-break: break-all;">
-                  https://7up-sandy.vercel.app/inicioSesion
+                  https://7up-sandy.vercel.app/validate
                 </p>
                 <p style="font-size: 18px; margin: 0 0 10px; color: white;">
                   ¡AHORA CONTINÚA SUBIENDO TUS RECIBOS PARA PARTICIPAR!

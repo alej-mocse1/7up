@@ -21,6 +21,7 @@ const MiPerfil = () => {
     const [data, setData] = useState(false);
     const [imgUser, setImgUser] = useState([]);
     const navigate = useNavigate();
+    const [Loading, setLoading] = useState(false);
 
     useEffect(() => {
         try {
@@ -41,6 +42,8 @@ const MiPerfil = () => {
           const json = {
             userId: data.id,
           };
+
+          setLoading(true)
     
           try {
             const response = await fetch("https://7up-production.up.railway.app/img/getImgByidUser", {
@@ -56,6 +59,8 @@ const MiPerfil = () => {
             setImgUser(result.data)
           } catch (error) {
             console.error("Error en el registro:", error);
+          } finally{
+            setLoading(false)
           }
         }
       };
@@ -91,8 +96,12 @@ const MiPerfil = () => {
           console.log("data GET INFO USER",data);
           localStorage.setItem("userData", JSON.stringify(data.data));
 
-          if(data?.message == "User deleted" ) navigate("/Registro")
-    
+
+
+          if(data?.message == "User deleted" ){
+            localStorage.setItem("userData", JSON.stringify(false));
+            navigate("/Registro")
+          } 
       
         } catch (error) {
           console.error("Error en el registro:", error);
@@ -140,37 +149,41 @@ const MiPerfil = () => {
 
                     <div className={styles.datosVucherDiv}>
                       <div className={styles.datosImg}>
-                      <h1>Llevas {imgUser?.length  >  0 ? imgUser?.length   : 0 } voucher subidos</h1>
-                        <p className={styles.p1}>¡Entre mas vouchers registres , más oportunidad tienes de ganar!</p>
+                      
+                      {
+                         !Loading ?  <>
+                              <h1>Llevas {imgUser?.length  >  0 ? imgUser?.length   : 0 } voucher subidos</h1>
+                              <p className={styles.p1}>¡Entre mas vouchers registres , más oportunidad tienes de ganar!</p>
+                              <div
+                                  // style={{
+                                  //   width: '300px',
+                                  //   overflowX: 'auto',
+                                  //   display: 'flex',
+                                  //   flexDirection: 'row-reverse', // derecha a izquierda
+                                  //   gap: '10px',
+                                  //   padding: '10px',
+                                  //   border: '1px solid #ccc',
+                                  //   borderRadius: '8px',
+                                  // }}
+                                  className={styles.containImgs}
+                                >
+                                  {imgUser.map((el, index) => (
+                                    <img
+                                      key={index}
+                                      src={el.img} // o solo el.img si es una URL
+                                      alt={`Imagen ${index + 1}`}
+                                      style={{
+                                        width: '200px',
+                                        height: 'auto',
+                                        borderRadius: '8px',
+                                        flexShrink: 0, // evita que se redimensionen
+                                      }}
+                                    />
+                                  ))}
+                              </div>
+                         </> : <h2 style={{fontSize:"60px",color:"black", position:"relative", top:"-60px"}}>Cargando...</h2>
+                      }
 
-
-                        <div
-                            // style={{
-                            //   width: '300px',
-                            //   overflowX: 'auto',
-                            //   display: 'flex',
-                            //   flexDirection: 'row-reverse', // derecha a izquierda
-                            //   gap: '10px',
-                            //   padding: '10px',
-                            //   border: '1px solid #ccc',
-                            //   borderRadius: '8px',
-                            // }}
-                            className={styles.containImgs}
-                          >
-                            {imgUser.map((el, index) => (
-                              <img
-                                key={index}
-                                src={el.img} // o solo el.img si es una URL
-                                alt={`Imagen ${index + 1}`}
-                                style={{
-                                  width: '200px',
-                                  height: 'auto',
-                                  borderRadius: '8px',
-                                  flexShrink: 0, // evita que se redimensionen
-                                }}
-                              />
-                            ))}
-                          </div>
                       </div>
                     </div>
 

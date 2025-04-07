@@ -15,6 +15,7 @@ import Swal from "sweetalert2";
 const SubirVoucher = () => {
   const [imagenBase64, setImagenBase64] = useState(null);
   const [data, setData] = useState(false);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const inputRef = useRef(null);
@@ -32,7 +33,6 @@ const SubirVoucher = () => {
   
 
   const handleImagenChange = (e) => {
-    console.log("data",data);
     
     const file = e.target.files[0];
     if (!file) return;
@@ -42,6 +42,7 @@ const SubirVoucher = () => {
       setImagenBase64(reader.result); // esto es la imagen en base64
     };
     reader.readAsDataURL(file);
+
   };
 
   const handleClickImagen = () => {
@@ -61,6 +62,7 @@ const SubirVoucher = () => {
                 img: imagenBase64
               }
           
+            setLoading(true)
             try {
               const response = await fetch("https://7up-production.up.railway.app/img/createImg", {
                 method: "POST",
@@ -72,7 +74,10 @@ const SubirVoucher = () => {
           
               const data = await response.json();
 
-              if(data.success) navigate("/miPerfil")
+              if(data.success){
+                setLoading(false)
+                navigate("/miPerfil")
+              }
 
               if(data.message == 'El usuario ya cargó esta imagen previamente.'){
                 Swal.fire(
@@ -131,12 +136,15 @@ const SubirVoucher = () => {
             />
 
           <h1 className={styles.title} style={{ marginTop: "40px", cursor: "pointer",}}>
-            <img 
-             src={botonLog}
-             alt="boton cargar"
-             className={styles.titleImg} 
-             onClick={enviarImagen}
-             />
+            {
+              !loading ? <img 
+              src={botonLog}
+              alt="boton cargar"
+              className={styles.titleImg} 
+              onClick={enviarImagen}
+              /> : <h2 style={{fontSize:"60px",color:"white", position:"relative", top:"-60px"}}>Cargando...</h2>
+            }
+
           </h1>
 
           
