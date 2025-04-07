@@ -173,11 +173,11 @@ const InicioSesion = () => {
 
                     <p 
                       className={styles.p}> 
-                        Si no tienes un cuenta registrate
+                       Si no tienes un cuenta, 
                         <Link
                             to="/Registro"
                             className={styles.a}
-                            >Aqui</Link>
+                            >regístrate aquí</Link>
                    </p>
                 </form>
 
