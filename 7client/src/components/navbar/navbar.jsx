@@ -17,9 +17,6 @@ const Navbar = () => {
 
   const redirect = (param) => {
 
-    console.log("userData",userData);
-    
-
     if(param == "/inicioSesion"){
       if(userData?.id){
         navigate("/miPerfil")
@@ -45,6 +42,14 @@ const Navbar = () => {
   
   }, []);
 
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className={styles.navbar}>
       <div className={styles["navbar-logo"]}>
@@ -52,6 +57,7 @@ const Navbar = () => {
         <img
           src={Logo}
           alt="7UP Logo"
+          className={styles.imgresp}
         />
         </Link>
       </div>
@@ -60,9 +66,9 @@ const Navbar = () => {
           isMenuOpen ? styles["menu-open"] : ""
         }`}
       >
-        <a href="#mec">Mecánica</a>
+        <a onClick={() => scrollToSection('mec')} style={{cursor:"pointer"}}>Mecánica</a>
 
-        <a href="#premios">Premios</a>
+        <a onClick={() => scrollToSection('premios')} style={{cursor:"pointer"}}>Premios</a>
 
         <Link to="/ganadores">Ganadores</Link>
 

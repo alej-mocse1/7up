@@ -9,7 +9,7 @@ import ballonder from "../../assets/balloon_der.png";
 import ballon1zq from "../../assets/balloon_izq.png";
 
 const TyC = () => {
-
+    
     useEffect(() => {
         window.scrollTo(0, 0);
       }, []);
