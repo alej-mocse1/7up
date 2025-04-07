@@ -15,7 +15,9 @@ const Footer = () => {
         <a href="#faqs">FAQ'S</a>
       </div>
       <p className={styles.promotion}>
-      *Promoción válida del 7 de abril al 19 de mayo de 2025. Nada que comprar para participar. Válida para residentes de Puerto Rico. Consulta las reglas en 7uppr.com
+      *Promoción válida del 7 de abril al 19 de mayo de 2025. Nada que comprar para participar.
+      <br />
+       Válida para residentes de Puerto Rico. Consulta las reglas en 7uppr.com
       </p>
       <div className={styles.social}>
         <div className={styles.socialIcons}>

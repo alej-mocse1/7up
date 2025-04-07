@@ -73,7 +73,8 @@
     text-transform: uppercase; /* Convierte el texto a mayúsculas */
     cursor: pointer;
     white-space: nowrap;
-    margin-bottom: 3px;
+    position: relative;
+    top: -3px;
   }
   
   .btn-register {
@@ -92,7 +93,8 @@
     padding-left: 30px;
     cursor: pointer;
     margin-bottom: 3px;
-
+    position: relative;
+    top: -3px;
   }
   
   
