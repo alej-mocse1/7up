@@ -23,7 +23,7 @@ const Input = ({type,placeholder,iconoIzq,iconoDer,handleChange,borderErr,msjErr
          
 
                 {
-                    iconoDer && <span className={styles.iconInputDer} style={{border:"1px solid black"}}>
+                    iconoDer && <span className={styles.iconInputDer} >
                                   <img src={iconoDer} alt={iconoDer}/>
                                 </span>
                 }
