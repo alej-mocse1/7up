@@ -20,12 +20,15 @@
 
 .titleImg2{
   width: 70%;
+  position: relative;
 }
 
 
 .titleImg{
-    width: 17%;
-}
+    width: 14%;
+    position: relative;
+    top: 50px;
+  }
 
 
 .loginForm{
