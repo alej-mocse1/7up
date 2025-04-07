@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
-import styles from "./correO.module.css";
+import styles from "./correo.module.css";
 import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
 import iniImg from "../../assets/tit3.png"
