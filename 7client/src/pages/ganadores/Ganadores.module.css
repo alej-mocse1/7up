@@ -84,7 +84,7 @@
       left: 33%; */
       text-align: center;
       position: relative;
-      top: 18vh;
+      top: 20vh;
     }
 
 
@@ -142,15 +142,24 @@
       width: 60%;
     }
   
-  
-    /* @media (min-width: 1600px) { */
 
-  
-      .containerFooter{
-        margin-top: 300px;
+    .containerFooter{
+      margin-top: 300px;
+    }
+
+    
+    @media (min-width: 1600px) { 
+
+      .containImg{
+        /* position: absolute;
+        top: 65%;
+        left: 33%; */
+        text-align: center;
+        position: relative;
+        top: 16vh;
       }
-      
-    /* } */
+  
+    }
 
 
   

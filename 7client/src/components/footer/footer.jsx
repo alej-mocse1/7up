@@ -3,12 +3,24 @@ import styles from './footer.module.css';
 import logoFb from '../../assets/facebook.png';
 import logoRalph from '../../assets/Ralphs.png';
 import { Link } from 'react-router-dom';
+import productosImg from "../../assets/productos.png";
 
 const Footer = () => {
   return (
     <>
 
     <footer className={styles.footer}>
+
+                {/* <div >
+                    <h1 className={styles.title} style={{marginTop:"40px"}}>
+                        <img
+                            src={productosImg}
+                            className={styles.productosImg}
+                            />                 
+                    </h1>
+                </div> */}
+
+
       <div className={styles.links}>
          <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
          <Link to="/Priv">AVISO DE PRIVACIDAD</Link>

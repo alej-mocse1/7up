@@ -96,6 +96,14 @@
 }
 
 
+.productosImg{
+  position: relative;
+  right: 30px;
+  top: -30px; 
+  width: 17%;
+}
+
+
 /* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
   .links {
