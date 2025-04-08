@@ -140,7 +140,7 @@ const InicioSesion = () => {
             setLoading(false)
             Swal.fire(
               "¡UPPPSS! 😓",
-              "Algo salió mal al intentar recuperar tu contraseña. Por favor, intentá nuevamente más tarde.",
+              "Olvidaste escribir tu correo electrónico. Por favor, escríbelo e inténtalo nuevamente.",
               "error"
             );
           }
@@ -213,14 +213,7 @@ const InicioSesion = () => {
                         //   msjErr={ "Las contraseñas no coinciden."}
                         />
                     </div>
-                     
-                     <a
-                      // href=""
-                      className={styles.a}
-                      onClick={recuperarPass}
-                      style={{cursor:"pointer"}}
 
-                      >Olvidé mi contraseña</a>
 
                     <h1 className={styles.title} style={{marginTop:"40px"}}>
                         <img 
@@ -237,6 +230,23 @@ const InicioSesion = () => {
                           }}
                           />
                     </h1>
+
+                            <p   className={styles.p}> 
+                            Si olvidaste tu contraseña, escribe tu correo electrónico
+                            <br />
+                             en el campo correspondiente, y da clic 
+
+                            <a
+                      // href=""
+                      className={styles.a}
+                      onClick={recuperarPass}
+                      style={{cursor:"pointer", borderBottom:"2px solid white"}}
+
+                      > a este enlace</a>                            
+                          
+                            
+                            </p>            
+
 
                     <p 
                       className={styles.p}> 

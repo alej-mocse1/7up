@@ -161,7 +161,7 @@ const RecuperarPass = () => {
             setLoading(false)
             Swal.fire(
               "¡UPPPSS! 😓",
-              "Algo salió mal al intentar recuperar tu contraseña. Por favor, intentá nuevamente más tarde.",
+              "Olvidaste escribir tu correo electrónico. Por favor, escríbelo e inténtalo nuevamente.",
               "error"
             );
           }
@@ -174,7 +174,7 @@ const RecuperarPass = () => {
         
       Swal.fire({
         title: '¿Olvidaste tu contraseña?',
-        html: '¿Querés que te enviemos un email para recuperarla?',
+        html: '¿Quieres que te enviemos un email para recuperarla?',
         icon: 'question',
         showCancelButton: true,
         confirmButtonText: 'Sí, enviarlo',
