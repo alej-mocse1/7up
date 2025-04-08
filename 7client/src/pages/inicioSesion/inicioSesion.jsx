@@ -115,15 +115,15 @@ const InicioSesion = () => {
         return camposCompletos 
     };
 
-        ///Funcion para aplicar las validaciones
-        const postResetPas = async() => {    
+    ///Funcion para aplicar las validaciones
+    const postResetPas = async() => {    
 
           try {
             let json = {
               email: formData.Correo,
             }
     
-            const response = await fetch("https://7up-production.up.railway.app/user/generateTokenByUser", {
+            const response = await fetch(" ", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

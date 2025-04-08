@@ -158,10 +158,13 @@ const generateTokenByUser = async (req, res) => {
     // Generar un token aleatorio
     const token = crypto.randomBytes(32).toString('hex');
 
+    console.log("token", token);
+    
+
     person.tokenResetPass = token
 
-
     await person.save();
+
 
     let envio = `
     <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #28a745; font-family: Arial, sans-serif;">
