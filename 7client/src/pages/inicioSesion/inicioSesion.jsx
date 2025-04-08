@@ -41,9 +41,6 @@ const InicioSesion = () => {
           "Correo": value
         }));
 
-
-
-
       };
 
     const handleContraseña = (e) => {
@@ -54,9 +51,9 @@ const InicioSesion = () => {
           "Contraseña": value
         }));
 
- 
 
       };
+
 
     ///funcion para enviar la info al servidor
     const handleSubmit = async (e) => {
@@ -102,13 +99,13 @@ const InicioSesion = () => {
                 }
                 
     };
-
+  
           
-      ///Funcion para aplicar las validaciones
-      const isFormValid = () => {    
+    ///Funcion para aplicar las validaciones
+    const isFormValid = () => {    
         const {
             Correo,
-          Contraseña
+            Contraseña
         } = formData;
       
         // Validar campos obligatorios y checkboxes obligatorios
@@ -116,7 +113,73 @@ const InicioSesion = () => {
       
       
         return camposCompletos 
+    };
+
+        ///Funcion para aplicar las validaciones
+        const postResetPas = async() => {    
+
+          try {
+            let json = {
+              email: formData.Correo,
+            }
+    
+            const response = await fetch("https://7up-production.up.railway.app/user/generateTokenByUser", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(json),
+            });
+        
+            if (!response.ok) {
+              throw new Error("Error al enviar los datos");
+            }
+        
+          } catch (error) {
+            console.error("Error en el registro:", error);
+            setLoading(false)
+            Swal.fire(
+              "¡UPPPSS! 😓",
+              "Algo salió mal al intentar recuperar tu contraseña. Por favor, intentá nuevamente más tarde.",
+              "error"
+            );
+          }
+    
+    
+        };
+
+        ///Funcion para aplicar las validaciones
+    const recuperarPass = () => {    
+        
+      Swal.fire({
+        title: '¿Olvidaste tu contraseña?',
+        html: '¿Querés que te enviemos un email para recuperarla?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, enviarlo',
+        cancelButtonText: 'No, cancelar',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Aquí podrías llamar a tu función para generar el token y enviar el correo
+          Swal.fire({
+            title: '¡Listo!',
+            text: 'Te enviamos un mensaje a tu correo con instrucciones para recuperar tu contraseña.',
+            icon: 'success'
+          });
+
+          postResetPas()
+        } else {
+          Swal.fire({
+            title: 'Cancelado',
+            text: 'No se envió ningún correo.',
+            icon: 'info'
+          });
+        }
+      });
+
+
       };
+
 
 
     return( 
@@ -150,10 +213,13 @@ const InicioSesion = () => {
                         />
                     </div>
                      
-                     {/* <a 
-                      href=""
+                     <a
+                      // href=""
                       className={styles.a}
-                      >Olvidé mi contraseña</a> */}
+                      onClick={recuperarPass}
+                      style={{cursor:"pointer"}}
+
+                      >Olvidé mi contraseña</a>
 
                     <h1 className={styles.title} style={{marginTop:"40px"}}>
                         <img 
@@ -177,6 +243,7 @@ const InicioSesion = () => {
                         <Link
                             to="/Registro"
                             className={styles.a}
+                            onClick={recuperarPass}
                             >regístrate aquí</Link>
                    </p>
                 </form>

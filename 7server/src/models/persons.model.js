@@ -47,6 +47,12 @@ const PersonSchema = {
     field: "pass"
   },
 
+  tokenResetPass: {  
+    allowNull: false,
+    type: DataTypes.STRING,
+    field: "tokenResetPass"
+  },
+
   email: {  
     allowNull: false,
     type: DataTypes.STRING,
