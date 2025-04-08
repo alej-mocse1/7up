@@ -103,12 +103,19 @@
   width: 17%;
 }
 
+.brResp{
+  display: none;
+}
 
 /* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
   .links {
-    flex-direction: column; /* Coloca los enlaces en una columna */
+    flex-direction: column-reverse; /* Coloca los enlaces en una columna */
     gap: 5px;
+  }
+
+  .brResp{
+    display: flex;
   }
 
   .promotion {
