@@ -77,40 +77,43 @@ const MiPerfil = () => {
 
       const deleteUser = async() => {
 
-        let json = {
-            id: data.id,
-          }
+        // let json = {
+        //     id: data.id,
+        //   }
       
-        try {
-          const response =  await fetch("https://7up-production.up.railway.app/user/deleteUser", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(json),
-          });
+        // try {
+        //   const response =  await fetch("https://7up-production.up.railway.app/user/deleteUser", {
+        //     method: "POST",
+        //     headers: {
+        //       "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify(json),
+        //   });
       
       
-          const data = await response.json();
+        //   const data = await response.json();
 
-          console.log("data GET INFO USER",data);
-          localStorage.setItem("userData", JSON.stringify(data.data));
+        //   console.log("data GET INFO USER",data);
+        //   localStorage.setItem("userData", JSON.stringify(data.data));
 
 
 
-          if(data?.message == "User deleted" ){
-            localStorage.setItem("userData", JSON.stringify(false));
-            navigate("/Registro")
-          } 
+        //   if(data?.message == "User deleted" ){
+        //     localStorage.setItem("userData", JSON.stringify(false));
+        //     navigate("/Registro")
+        //   } 
       
-        } catch (error) {
-          console.error("Error en el registro:", error);
-          Swal.fire(
-            "¡UPPPSS!",
-            "Error al eliminar el usuario",
-            "error"
-          );
-        }
+        // } catch (error) {
+        //   console.error("Error en el registro:", error);
+        //   Swal.fire(
+        //     "¡UPPPSS!",
+        //     "Error al eliminar el usuario",
+        //     "error"
+        //   );
+        // }
+
+        localStorage.setItem("userData", JSON.stringify(false));
+        navigate("/inicioSesion")
       };
 
 
@@ -129,9 +132,9 @@ const MiPerfil = () => {
                     </h1>
                 
                 
-                 <p className={styles.p}> 
+                 {/* <p className={styles.p}> 
                     ¡Máximo 5 participaciones al día!                   
-                 </p>
+                 </p> */}
 
                 <div className={styles.contentUserData}>
                     <div className={styles.datosUserDiv}>
@@ -139,7 +142,7 @@ const MiPerfil = () => {
                             <h1>{data?.name?.split(" ")[0]}</h1>
                             <p className={styles.p1}>{data?.lastName}</p>
 
-                            <p className={styles.p2} onClick={deleteUser}>Eliminar cuenta</p>
+                            <p className={styles.p2} onClick={deleteUser}>Cerrar sesión</p>
                         </div>
 
                         <h1 className={styles.title2} style={{cursor:"pointer"}}>
@@ -152,8 +155,8 @@ const MiPerfil = () => {
                       
                       {
                          !Loading ?  <>
-                              <h1>Llevas {imgUser?.length  >  0 ? imgUser?.length   : 0 } voucher subidos</h1>
-                              <p className={styles.p1}>¡Entre mas vouchers registres , más oportunidad tienes de ganar!</p>
+                              <h1>Llevas {imgUser?.length  >  0 ? imgUser?.length   : 0 } voucher(s) subido(s)</h1>
+                              <p className={styles.p1}>¡Entre más vouchers registres, más oportunidades tienes de ganar!</p>
                               <div
                                   // style={{
                                   //   width: '300px',

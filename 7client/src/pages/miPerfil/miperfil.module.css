@@ -32,7 +32,7 @@
   }
 
 .titleImg{
-    width:  100%;
+    width:  90%;
   }
 
 .titleImg2{
@@ -114,7 +114,7 @@
 }
 
 .datosUser{
-    background-color: yellow;
+    background-color: #ffe631;
     border-radius: 50px;
     padding: 20px;
     padding-top: 20px;
@@ -129,7 +129,7 @@
 .datosUser h1{
   font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px;
-  font-size: 45px;
+  font-size: 60px;
   position: relative;
   top: -30px;
 }
@@ -146,10 +146,10 @@
   font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
   letter-spacing: 1.4px;
   font-size: 20px;
-  color: orange;
+  color: #fe7914;
   cursor: pointer;
   position: relative;
-  top: -0px;
+  top: -10px;
 }
 
 .datosVucherDiv{
@@ -170,6 +170,7 @@
   border-radius: 50px;
   text-align: left;
   padding: 30px;
+  padding-top: 45px;
   position: relative;
   top: 5px;
 }
@@ -181,10 +182,10 @@
 }
 
 .datosImg p{
-  font-size: 60px;
+  font-size: 55px;
   font-size: 22px;
   position: relative;
-  top: -100px;
+  top: -90px;
 }
 
 
@@ -199,7 +200,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   position: relative;
-  top: -70px;
+  top: -100px;
   height: 200px;
 }
 

@@ -113,7 +113,7 @@ const SubirVoucher = () => {
 
         <form className={styles.loginForm}>
           <p className={styles.p}>
-            ¡Entre más vouchers registres, más oportunidad tienes de ganar!
+          ¡Entre más vouchers registres, más oportunidades tienes de ganar!
           </p>
 
           <div className={styles.divUp}>
