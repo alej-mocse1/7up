@@ -183,7 +183,7 @@
   
     .menu-toggle {
       display: block;
-      color: black;
+      color:white;
       font-size: 40px;
       font-weight: 800;
       position: relative;
@@ -192,7 +192,8 @@
 
     .imgresp{
       position: relative;
-      left: 10px;
+      left: 60px;
+      z-index: 1000;
     }
   
     .navbar-links a {
