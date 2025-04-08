@@ -169,7 +169,8 @@
   
   
       .containImg{
-        display: none;
+        width: 70%;
+        position: relative;
       }
     
       .containImg2{
@@ -183,14 +184,18 @@
       }
   
       .titleImg{
-          width: 100%;
+          width: 75%;
+          border: 1px solid black;
       }
   
        .text {
           padding-left: 0%;
           padding-right: 0%;
+          font-size: 20px;
       }
-  
+      .text a {
+        font-size: 20px;
+    }
       .container {
           padding-bottom: 60px;
           min-height: 140%;
@@ -199,12 +204,19 @@
 
       .container2{
          top: 100px;
-
       }
       
       .navbarStyles{
         background-color: #32ab56;
         position: relative;
         top: -10px;
+      }
+
+      .porductosImg{
+        position: relative;
+        right: -40px;  
+  
+        top: -100px;
+        width: 100%;
       }
     }
