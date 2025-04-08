@@ -4,6 +4,7 @@ import titularImg from "../../assets/titular.png";
 import paricipaImg from "../../assets/participa.png";
 import baloonImg from "../../assets/balloons_izquierda.png";
 import premiosImg from "../../assets/premios.png";
+import premios_m from "../../assets/premios_m.png";
 import porductosImg from "../../assets/productos.png";
 import Footer from "../../components/footer/footer";
 import Navbar from "../../components/navbar/navbar";
@@ -54,7 +55,14 @@ const Home = () => {
         <img
           src={premiosImg}
           className={styles.premiosImg}
-          id="premios"
+         
+        />
+
+        
+         <img
+          src={premios_m}
+          className={styles.premiosImg2}
+      
         />
 
 

@@ -81,6 +81,10 @@
   }
 
 
+  .premiosImg2{
+    display: none;
+  }
+
 
 @media (max-width: 700px) {
     .homeBackground{
@@ -132,8 +136,20 @@
         position: absolute;
         left: 20px;
         top: 20vh;
+        display: none;
     }
     
+
+    .premiosImg2{
+        width: 90%;
+        height: auto;
+        position: absolute;
+        left: 20px;
+        top: 20vh;
+        display: flex;
+    }
+
+
     .porductosImg{
         width: 70%;
         height: auto;
@@ -141,6 +157,9 @@
         /* bottom: -300; */
         left: 40px;
         bottom: -110px;
+        
     }
+
+
 
   }
