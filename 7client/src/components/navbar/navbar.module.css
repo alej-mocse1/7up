@@ -183,7 +183,7 @@
   
     .menu-toggle {
       display: block;
-      color:white;
+      color:white !important;
       font-size: 40px;
       font-weight: 800;
       position: relative;
