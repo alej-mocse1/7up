@@ -23,6 +23,9 @@
     width: 20%;
   }
 
+.titleImg2{
+    width: 100%;
+}
 
 .loginForm{
     display: flex;

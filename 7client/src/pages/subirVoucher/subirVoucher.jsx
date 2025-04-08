@@ -140,7 +140,7 @@ const SubirVoucher = () => {
               !loading ? <img 
               src={botonLog}
               alt="boton cargar"
-              className={styles.titleImg} 
+              className={styles.titleImg2} 
               onClick={enviarImagen}
               /> : <h2 style={{fontSize:"60px",color:"white", position:"relative", top:"-60px"}}>Cargando...</h2>
             }
