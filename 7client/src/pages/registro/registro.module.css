@@ -115,9 +115,9 @@
 
 
 .productosImg{
-  
   position: relative;
-  right: 120px;
+  right: 60px; 
+ 
 }
 
 @media (max-width: 768px) {
@@ -136,9 +136,7 @@
   }
 
   .productosImg{
-     position: relative;
-     right: 120px;
-     width: 200px;
+
   }
 
   .title {

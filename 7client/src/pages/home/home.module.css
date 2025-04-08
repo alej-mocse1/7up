@@ -124,10 +124,10 @@
     }
     
     .porductosImg{
-        width: 50%;
+        width: 80%;
         height: auto;
         position: absolute;
-        bottom: -20;
+        /* bottom: -300; */
         left: 10px;
     }
 

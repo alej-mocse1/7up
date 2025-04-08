@@ -333,7 +333,7 @@ const Registro = () => {
 
 
                         <Input
-                          placeholder="confirmarContraseña"
+                          placeholder= "Confirmar contraseña"
                           type="password"
                           iconoIzq={inconoPass}
                           iconoDer={inconoPassDer}
@@ -353,7 +353,7 @@ const Registro = () => {
                             onChange={handleChange}
                             style={{backgroundColor:"red"}}
                             />                        
-                        <label for="AceptoAvisodeprivacidad">Acepto Aviso de privacidad</label>
+                        <label for="AceptoAvisodeprivacidad">Acepto Aviso de Privacidad</label>
                         </div>
                     
                         <div className={styles.divChek}>
@@ -363,7 +363,7 @@ const Registro = () => {
                             checked={formData.aceptaTerminos}
                             onChange={handleChange}
                             />
-                            <label for="AceptoTérminosycondiciones">Acepto Términos y condiciones</label>
+                            <label for="AceptoTérminosycondiciones">Acepto Términos y Condiciones</label>
                         </div>
 
 
@@ -374,7 +374,7 @@ const Registro = () => {
                             checked={formData.aceptaInfo}
                             onChange={handleChange}
                             />
-                            <label for="AceptorecibirinformaciónporWhatsappye-mail">Acepto recibir información por Whatsappye-mail</label>
+                            <label for="AceptorecibirinformaciónporWhatsappye-mail"> Acepto recibir información por Whatsapp y/o E-mail</label>
                         </div>
                     </div>
                     <h1 className={styles.title} style={{marginTop:"40px"}}>
@@ -395,11 +395,11 @@ const Registro = () => {
 
                     <p 
                       className={styles.p}> 
-                        Si tienes una cuenta registrate
+                       Si ya tienes una cuenta,
                         <Link
                             to="/inicioSesion"
                             className={styles.a}
-                            >Aqui</Link>
+                            > ingresa aquí</Link>
                    </p>
                 </form>
 

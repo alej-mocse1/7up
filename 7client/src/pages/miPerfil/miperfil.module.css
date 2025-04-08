@@ -206,7 +206,7 @@
 .productosImg{
   
   position: relative;
-  right: 120px;
+  right: 60px;
 }
 
 
@@ -314,9 +314,12 @@
 
 
   .productosImg{
-    position: relative;
+    /* position: relative;
     right: 90px;
     width: 290px;
-    top: -80px;
+    top: -80px; */
+    width: 100%;
  }
+
+
 }

@@ -15,11 +15,18 @@
       font-family: Arial, sans-serif;
       color: #333;
       line-height: 1.6;
-      padding-bottom: 170px;
+      padding-bottom: 300px;
       border: 1px solid black;
     }
 
 
+    .porductosImg{
+      position: relative;
+      right: 60px; 
+      top: 20px;
+    }
+  
+  
     .container2 {
       padding: 20px;
       font-family: Arial, sans-serif;
@@ -69,9 +76,9 @@
     }
   
     .containImg{
-      position: absolute;
+      /* position: absolute;
       top: 65%;
-      left: 33%;
+      left: 33%; */
       text-align: center;
     }
   

@@ -90,6 +90,11 @@
   right: 10%;
   width: 8%;
 }
+.productosImg{
+  position: relative;
+  right: 60px; 
+
+}
 
 
 
@@ -109,9 +114,10 @@
   }
 
   .productosImg{
-     position: relative;
+     /* position: relative;
      right: 30px;
-     width: 200px;
+     width: 200px; */
+     width: 100%;
   }
 
   .title {
@@ -127,6 +133,12 @@
     padding: 20px;
   }
   
+
+  .productosImg{
+    position: relative;
+    left: 0;
+  
+  }
   
   
 }

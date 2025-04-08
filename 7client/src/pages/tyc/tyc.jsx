@@ -173,11 +173,14 @@ const TyC = () => {
 
 
         </div>
-    </div>
 
-    <h1 className={styles.containImg}>
-        <img src={ProductosImg} alt="ProductosImg" className={styles.balloon_izq} />
+
+
+    </div>
+    <h1 className={styles.containImg} style={{marginTop:"-350px", backgroundColor:"#32ab56"}}  >
+        <img src={ProductosImg} alt="ProductosImg" className={styles.porductosImg} />
      </h1>
+
 
      <h1 className={styles.containImg2}>
         <img src={ballonder2} alt="ballonder2" className={styles.ballonder2} />
@@ -192,7 +195,8 @@ const TyC = () => {
         <img src={ballon1zq} alt="ballon1zq" className={styles.ballon1zq} />
      </h1>
 
-    <div className={styles.containerFooter}>
+    <div className={styles.containerFooter} style={{marginTop:"-150px", backgroundColor:"white"}} >
+      <div style={{height:"180px"}}></div>
       <Footer></Footer>     
     </div> 
 
