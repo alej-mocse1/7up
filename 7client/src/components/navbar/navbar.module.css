@@ -146,6 +146,17 @@
 
     }
 
+    .navbar-logo  {
+      width: 100vw;
+      text-align: center;
+      padding-right:30px ;
+    }
+
+    .navbar-logo img {
+      height: 140px;
+      position: relative;
+      left: 30px;
+    }
 
 
     .navbar-links {
@@ -153,14 +164,14 @@
       top: 0;
       left: 0; /* Cambiado de right: 0 a left: 0 */ 
       height: 100vh;
-      width: 220px;
+      width: 100%;
       background-color: #32ab56;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       transform: translateX(-100%); /* Cambiado de translateX(100%) a translateX(-100%) */
       transition: transform 0.3s ease-in-out;
-      padding: 20px;
+      /* padding: 20px; */
       
     }
 
@@ -188,6 +199,10 @@
       font-weight: 800;
       position: relative;
       right: 20px;
+    }
+
+    .menu-toggle img {
+      width: 40px;
     }
 
     .imgresp{

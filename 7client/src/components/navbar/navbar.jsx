@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./navbar.module.css"; // Importar estilos como módulo
 import Logo from "../../assets/logo.png";
 
+import menu1 from "../../assets/menu_1.png";
+import menu2 from "../../assets/menu_2.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -96,7 +98,10 @@ const Navbar = () => {
         </button>
       </div>
       <div className={styles["menu-toggle"]} onClick={toggleMenu}>
-        {isMenuOpen ? "✖" : "☰"}
+        {isMenuOpen ? <img src={menu2} alt="" /> :<img src={menu1} alt="" />}
+        <i>
+          
+        </i>
       </div>
     </div>
   );
