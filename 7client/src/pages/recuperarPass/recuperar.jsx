@@ -15,6 +15,8 @@ import iconoSes from "../../assets/ico_nombre.png";
 import inconoPass from "../../assets/ico_contra.png";
 import inconoPassDer from "../../assets/ico_ojo.png";
 
+
+
 //importamos las imagenes de corazones
 import ballonder2 from "../../assets/balloon_der2.png";
 import ballonder from "../../assets/balloon_der.png";
