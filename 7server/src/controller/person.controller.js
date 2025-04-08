@@ -238,7 +238,7 @@ const resetPass = async (req, res) => {
 
     await person.save();
 
-    res.json({ success: true, message: "User deleted" });
+    res.json({ success: true, message: person });
   } catch (error) {
     res.status(500).send({ success: false, message: error.message });
   }

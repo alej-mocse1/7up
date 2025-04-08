@@ -10,6 +10,7 @@ import SubirVoucher from './pages/subirVoucher/subirVoucher';
 import CorreoOk from './pages/correoOk/correo';
 import Priv from './pages/privacidad/Priv';
 import Ganadores from './pages/ganadores/Ganadores';
+import RecuperarPass from './pages/recuperarPass/recuperar';
 
 
 function App() {
@@ -30,7 +31,8 @@ function App() {
           <Route path="/validate" element={<CorreoOk/>} />
           <Route path="/Priv" element={<Priv/>} />
           <Route path="/Ganadores" element={<Ganadores/>} />
-        </Routes>
+          <Route path="/pass/:id" element={<RecuperarPass />} />
+         </Routes>
       </BrowserRouter>
     
     </div>
