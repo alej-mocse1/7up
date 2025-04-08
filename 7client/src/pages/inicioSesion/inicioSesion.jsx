@@ -123,7 +123,7 @@ const InicioSesion = () => {
               email: formData.Correo,
             }
     
-            const response = await fetch(" ", {
+            const response = await fetch("https://7up-production.up.railway.app/user/generateTokenByUser", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -167,7 +167,8 @@ const InicioSesion = () => {
             icon: 'success'
           });
 
-          postResetPas()
+          postResetPas();
+
         } else {
           Swal.fire({
             title: 'Cancelado',

@@ -182,7 +182,7 @@ const generateTokenByUser = async (req, res) => {
                 <b style="font-size: 30px; margin: 0 0 10px; color: #ffdd00;">${person.name}</b>
                 <br>
                 <p style="font-size: 18px; margin: 0 0 10px; color: white;">PARA RECUPERAR TU CONTRASEÑA,<br> DA CLICK EN EL ENLACE QUE APARECE A CONTINUACIÓN.</p>
-                 https://7up-sandy.vercel.app/pas/${token}
+                 https://7up-sandy.vercel.app/pass/${token}
                 <p style="font-size: 18px; margin: 0 0 10px; color: white;">
                   ¡GRACIAS!
                 </p>
