@@ -84,7 +84,7 @@
       left: 33%; */
       text-align: center;
       position: relative;
-      top: 20vh;
+      top: 20.5vh;
     }
 
 
@@ -133,7 +133,7 @@
   
     .containImg4{
       position: absolute;
-      top:50%;
+      top:48%;
       left: 67%;
       text-align: right;
     }
