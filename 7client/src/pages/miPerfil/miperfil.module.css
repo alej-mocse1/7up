@@ -52,7 +52,7 @@
 
 .containerFooter{
   margin-top: -170px;
-  padding-top: 140px;
+  padding-top: 100px;
   background-color: white;
 }
 
@@ -203,12 +203,13 @@
   height: 200px;
 }
 
-.productosImg{
-  
-  position: relative;
-  right: 60px;
-}
 
+.productosImg{
+  position: relative;
+  right: 30px;
+  top: -30px; 
+  width: 80%;
+}
 
 
 @media (max-width: 1101px) {

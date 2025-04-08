@@ -35,6 +35,9 @@ const Home = () => {
           className={styles.titularImg}
         />
       </div>
+
+
+      <div  id="mec" style={{position:"relative",top:"-330px"}}></div>
       <div className={styles.secondSection} id="mec">
         <img
           src={paricipaImg}
@@ -45,6 +48,8 @@ const Home = () => {
           src={baloonImg}
           className={styles.baloonImg}
         />
+
+        <div  id="premios"  style={{position:"relative",top:"-100px"}}></div>
 
         <img
           src={premiosImg}

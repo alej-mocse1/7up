@@ -19,7 +19,7 @@
       line-height: 1.6;
       padding-bottom: 170px;
       height: 1;
-      margin-bottom: 100px;
+      margin-bottom: 0px;
     }
     
     .container2 {
@@ -27,7 +27,7 @@
       font-family: Arial, sans-serif;
       color: #333;
       line-height: 1.6;
-      padding-bottom: 170px;
+      padding-bottom: 100px;
       height: 1;
       margin-bottom: 0px;
       position: relative;
@@ -78,14 +78,25 @@
     .list a:hover {
       text-decoration: underline;
     }
-  
     .containImg{
-      position: absolute;
-      top: 0%;
-      left: 33%;
+      /* position: absolute;
+      top: 65%;
+      left: 33%; */
       text-align: center;
+      position: relative;
+      top: 18vh;
     }
-  
+
+
+    .porductosImg{
+      position: relative;
+      right: 30px; 
+      top: 20px;
+      top: -0px;
+      width: 17%;
+    }
+
+
     .containImg2{
       position: absolute;
       top: 18%;
@@ -133,15 +144,17 @@
   
   
     /* @media (min-width: 1600px) { */
-      .containImg{
-        top:42%;
-      }
+
   
       .containerFooter{
         margin-top: 300px;
       }
       
     /* } */
+
+
+  
+  
   
     @media (max-width: 768px) {
   

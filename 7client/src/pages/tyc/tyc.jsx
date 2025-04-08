@@ -196,7 +196,7 @@ const TyC = () => {
      </h1>
 
     <div className={styles.containerFooter} style={{marginTop:"-150px", backgroundColor:"white"}} >
-      <div style={{height:"180px"}}></div>
+      <div style={{height:"100px"}}></div>
       <Footer></Footer>     
     </div> 
 

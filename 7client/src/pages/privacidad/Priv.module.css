@@ -22,8 +22,10 @@
 
     .porductosImg{
       position: relative;
-      right: 60px; 
+      right: 30px; 
       top: 20px;
+      top: -10px;
+      width: 17%;
     }
   
   

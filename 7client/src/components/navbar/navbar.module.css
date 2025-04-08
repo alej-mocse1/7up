@@ -124,7 +124,7 @@
     cursor: pointer;
   }
 
-  @media (max-width: 1168px) {
+  @media (max-width: 980px) {
     .navbar {
       display: flex;
       align-items: center;
@@ -139,7 +139,7 @@
     
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 980px) {
     .navbar {
       padding: 0;
       left: 0;

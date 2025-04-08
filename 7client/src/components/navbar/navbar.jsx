@@ -16,7 +16,7 @@ const Navbar = () => {
 
 
   const redirect = (param) => {
-
+ 
     if(param == "/inicioSesion"){
       if(userData?.id){
         navigate("/miPerfil")
@@ -52,7 +52,7 @@ const Navbar = () => {
 
   const scrollToSection = (id) => {
 
-
+    setIsMenuOpen(false)
     if (window.location.pathname !== '/') {
       localStorage.setItem('scrollTo', id); // Guardamos la sección
       navigate('/'); // Navegamos al home

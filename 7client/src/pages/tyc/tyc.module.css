@@ -147,8 +147,9 @@
 
   .porductosImg{
     position: relative;
-    right: 60px; 
-    top: 20px;
+    right: 30px; 
+    top: -10px;
+    width: 17%;
   }
 
 
