@@ -235,7 +235,6 @@ const resetPass = async (req, res) => {
     });
 
     person.pass = pass
-
     await person.save();
 
     res.json({ success: true, message: person });

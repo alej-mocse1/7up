@@ -4,7 +4,7 @@ import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
 import iniImg from "../../assets/titSes.png"
 import Input from "../../components/inputs/input";
-import botonLog from "../../assets/boton.png"
+import botonLog from "../../assets/bot_recuperar.png"
 import productosImg from "../../assets/productos.png";
 import { Link, useNavigate , useParams } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -94,10 +94,19 @@ const RecuperarPass = () => {
 
                   setLoading(false)
                   console.log("data GET INFO USER",data);
-                  localStorage.setItem("userData", JSON.stringify(data.data));
+                  localStorage.setItem("userData", JSON.stringify(data.message));
 
-                  navigate("/miPerfil")
-            
+                    // Mostrar mensaje y redirigir
+                Swal.fire({
+                    title: "¡Contraseña actualizada!",
+                    text: "Tu contraseña fue cambiada correctamente.",
+                    icon: "success",
+                    timer: 5000,
+                    confirmButtonText: "OK",
+                }).then(() => {
+                    navigate("/miPerfil");
+                });
+                        
               
                 } catch (error) {
                   console.error("Error en el registro:", error);
