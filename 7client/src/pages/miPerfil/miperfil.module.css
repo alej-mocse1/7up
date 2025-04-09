@@ -353,10 +353,11 @@
   
 }
 
-/* 
+
 .datosUser {
-  padding-left: 0;
-} */
+  position: relative;
+  right: 5px;
+}
 
 
 .datosUser h1{
