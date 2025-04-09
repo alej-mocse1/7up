@@ -121,6 +121,10 @@
   width: 17%;
 }
 
+.brResp{
+  display: none;
+}
+
 @media (max-width: 768px) {
 
 
@@ -137,7 +141,7 @@
   }
 
   .productosImg{
-
+    width: 75%;
   }
 
   .title {
@@ -146,7 +150,7 @@
   }
 
   .titleImg{
-    width: 90%;
+    width: 75%;
   } 
 
   .p{
@@ -159,6 +163,13 @@
   
   .contentInputsCheck{
     flex-direction: column;
+  }
+  .divChek{
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+  .brResp{
+    display: flex;
   }
   
 }

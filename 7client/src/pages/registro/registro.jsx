@@ -374,7 +374,9 @@ const Registro = () => {
                             checked={formData.aceptaInfo}
                             onChange={handleChange}
                             />
-                            <label for="AceptorecibirinformaciónporWhatsappye-mail"> Acepto recibir información por Whatsapp y/o E-mail</label>
+                            <label for="AceptorecibirinformaciónporWhatsappye-mail"> Acepto recibir información 
+                              <br className={styles.brResp} />
+                              por Whatsapp y/o E-mail</label>
                         </div>
                     </div>
                     <h1 className={styles.title} style={{marginTop:"40px"}}>
