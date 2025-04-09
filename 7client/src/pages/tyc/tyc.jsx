@@ -7,11 +7,14 @@ import Footer from '../../components/footer/footer';
 import ballonder2 from "../../assets/balloon_der2.png";
 import ballonder from "../../assets/balloon_der.png";
 import ballon1zq from "../../assets/balloon_izq.png";
+import usePageTracking from "../../hooks/useGa";
 
 const TyC = () => {
-    
+  usePageTracking()
     useEffect(() => {
         window.scrollTo(0, 0);
+        document.title = 'Términos & Condiciones / 7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
+        
       }, []);
 
 

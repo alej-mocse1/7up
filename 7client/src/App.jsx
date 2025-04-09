@@ -13,8 +13,12 @@ import Ganadores from './pages/ganadores/Ganadores';
 import RecuperarPass from './pages/recuperarPass/recuperar';
 
 
+import usePageTracking from './hooks/useGa';
+
+
 
 function App() {
+
 
   return (
     <div style={{position:"relative"}}>

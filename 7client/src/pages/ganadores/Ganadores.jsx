@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import styles from './Ganadores.module.css';
 import Navbar from '../../components/navbar/navbar';
 import title from "../../assets/titulo_ganadores.png";
@@ -7,9 +7,20 @@ import Footer from '../../components/footer/footer';
 import ballonder2 from "../../assets/balloon_der2.png";
 import ballonder from "../../assets/balloon_der.png";
 import ballon1zq from "../../assets/balloon_izq.png";
+import usePageTracking from "../../hooks/useGa";
 import { Link } from 'react-router-dom';
 
 const Ganadores = () => {
+  usePageTracking();
+
+
+    useEffect(() => {
+
+      document.title = 'Ganadores / 7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
+  
+    }, []);
+
+
   return (
     <div className={styles.tycBackground}>
     <div className={styles.container}>

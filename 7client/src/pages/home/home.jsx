@@ -8,8 +8,11 @@ import premios_m from "../../assets/premios_m.png";
 import porductosImg from "../../assets/productos.png";
 import Footer from "../../components/footer/footer";
 import Navbar from "../../components/navbar/navbar";
-const Home = () => {
+import usePageTracking from "../../hooks/useGa";
 
+
+const Home = () => {
+  usePageTracking()
 
   useEffect(() => {
     const sectionId = localStorage.getItem('scrollTo');
@@ -25,6 +28,9 @@ const Home = () => {
       // Esperamos un poco para asegurar que el DOM ya está montado
       setTimeout(scrollTo, 300);
     }
+
+    document.title = '7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
+
   }, []);
 
   return (

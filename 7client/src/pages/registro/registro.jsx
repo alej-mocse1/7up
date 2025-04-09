@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./registro.module.css";
 import Navbar from "../../components/navbar/navbar";
@@ -20,10 +20,18 @@ import ballonder2 from "../../assets/balloon_der2.png";
 import ballonder from "../../assets/balloon_der.png";
 import ballon1zq from "../../assets/balloon_izq.png";
 import Swal from "sweetalert2";
-
+import usePageTracking from "../../hooks/useGa";
 
 
 const Registro = () => {
+     usePageTracking()
+
+
+         useEffect(() => {
+             
+              document.title = 'Regístrate / 7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
+               
+         }, []);
 
     const [formData, setFormData] = useState({
         Nombres: "",

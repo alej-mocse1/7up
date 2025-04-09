@@ -8,7 +8,7 @@ import botonLog from "../../assets/UpVouch.png"
 import productosImg from "../../assets/productos.png";
 import Swal from "sweetalert2";
 
-
+import usePageTracking from "../../hooks/useGa";
 
 //importamos las imagenes de corazones
 import ballonder2 from "../../assets/balloon_der2.png";
@@ -22,6 +22,7 @@ const MiPerfil = () => {
     const [imgUser, setImgUser] = useState([]);
     const navigate = useNavigate();
     const [Loading, setLoading] = useState(false);
+    usePageTracking()
 
     useEffect(() => {
         try {
@@ -33,6 +34,14 @@ const MiPerfil = () => {
         }
 
     }, []);
+
+        
+    useEffect(() => {
+        
+         document.title = 'Mi Perfil / 7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
+          
+    }, []);
+    
 
 
     useEffect(() => {

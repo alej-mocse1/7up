@@ -11,12 +11,14 @@ import ballonder2 from "../../assets/balloon_der2.png";
 import ballonder from "../../assets/balloon_der.png";
 import ballon1zq from "../../assets/balloon_izq.png";
 import Swal from "sweetalert2";
+import usePageTracking from "../../hooks/useGa";
 
 const SubirVoucher = () => {
   const [imagenBase64, setImagenBase64] = useState(null);
   const [data, setData] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  usePageTracking()
 
   const inputRef = useRef(null);
 

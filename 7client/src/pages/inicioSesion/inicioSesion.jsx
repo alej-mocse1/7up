@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import styles from "./inicioSesion.module.css";
 import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
@@ -7,6 +7,7 @@ import Input from "../../components/inputs/input";
 import botonLog from "../../assets/boton.png"
 import productosImg from "../../assets/productos.png";
 import { Link, useNavigate } from "react-router-dom";
+import usePageTracking from "../../hooks/useGa";
 import Swal from "sweetalert2";
 
 
@@ -23,10 +24,17 @@ import ballon1zq from "../../assets/balloon_izq.png";
 
 
 const InicioSesion = () => {
-
+     usePageTracking()
     const navigate = useNavigate();
     const [Loading, setLoading] = useState(false);
     const [errorMensaje, setErrorMensaje] = useState("");
+
+    
+        useEffect(() => {
+    
+          document.title = 'Inicia Sesión / 7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
+      
+        }, []);
 
     const [formData, setFormData] = useState({
         Correo: "",

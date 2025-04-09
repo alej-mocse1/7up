@@ -8,7 +8,7 @@ import botonLog from "../../assets/bot_recuperar.png"
 import productosImg from "../../assets/productos.png";
 import { Link, useNavigate , useParams } from "react-router-dom";
 import Swal from "sweetalert2";
-
+import usePageTracking from "../../hooks/useGa";
 
 //importamos iconos
 import iconoSes from "../../assets/ico_nombre.png";
@@ -30,6 +30,14 @@ const RecuperarPass = () => {
     const [Loading, setLoading] = useState(false);
     const [errorMensaje, setErrorMensaje] = useState("");
     const { id } = useParams(); 
+    usePageTracking()
+    
+
+        useEffect(() => {
+            
+             document.title = 'Recuperar Contraseña / 7UP® & SCHWEPPES: ESTA PROMO ESTA DE MADRES';
+              
+        }, []);
 
     const [formData, setFormData] = useState({
         Correo: "",
