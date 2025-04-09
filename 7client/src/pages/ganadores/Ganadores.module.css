@@ -196,13 +196,13 @@
         font-size: 20px;
     }
       .container {
-          padding-bottom: 60px;
+          padding-bottom: 00px;
           min-height: 140%;
           min-height: 100vh;
       }
 
       .container2{
-         top: 100px;
+         top: 70px;
       }
       
       .navbarStyles{
@@ -215,7 +215,7 @@
         position: relative;
         right: -40px;  
   
-        top: -100px;
+        top: -200px;
         width: 100%;
       }
     }
