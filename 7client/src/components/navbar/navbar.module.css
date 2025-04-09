@@ -47,7 +47,6 @@
     background-color: rgba(59,127,45, 0.6); /* Fondo oscuro semitransparente */
     backdrop-filter: blur(10px); /* Difuminado suave */
     -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea sutil abajo */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra elegante */
   }
 
@@ -226,7 +225,6 @@
       background-color: rgba(59,127,45, 0.6); /* Fondo oscuro semitransparente */
       backdrop-filter: blur(10px); /* Difuminado suave */
       -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea sutil abajo */
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra elegante */
     }
   
