@@ -24,7 +24,7 @@ const Footer = () => {
       <div className={styles.links}>
          <Link to="/tyc">TÉRMINOS Y CONDICIONES</Link>
          <br className={styles.brResp}/>
-         <Link to="/">AVISO DE PRIVACIDAD</Link>
+         <Link to="/Priv">AVISO DE PRIVACIDAD</Link>
       </div>
       <p className={styles.promotion}>
       *Promoción válida del 7 de abril al 19 de mayo de 2025.
