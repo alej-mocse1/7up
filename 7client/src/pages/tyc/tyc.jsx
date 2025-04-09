@@ -20,6 +20,7 @@ const TyC = () => {
 
   return (
     <div className={styles.tycBackground} id='tyc'>
+      <div style={{height:"160px" , backgroundColor:"#32ab56"}} className='divSpac'></div>
     <div className={styles.container}>
         <div className={styles.navbarStyles}>
               <Navbar></Navbar>

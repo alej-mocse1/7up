@@ -20,21 +20,54 @@
     left: 0;
     width: 100%;
     background-color: transparent;
-    background-color: rgba(202, 198, 198, 0.3); /* Fondo oscuro semitransparente */
+    transition: background-color 0.3s ease;
+    background-color: rgba(63, 133, 49, 0.8); /* Fondo oscuro semitransparente */
     backdrop-filter: blur(10px); /* Difuminado suave */
     -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea sutil abajo */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra elegante */
-
   
   }
+
+  .navbartransparent {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+    padding-left: 6%;
+    padding-right: 6%;
+    color:white;
+    font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    background-color: rgba(63, 133, 49, 0.2); /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(10px); /* Difuminado suave */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea sutil abajo */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+  }
+
   
-  .navbar-logo img {
+  .imgresp {
     height: 140px;
     position: relative;
     top: 10px;
+    transition: 1s;
   }
   
+  .imgrespScroll{
+    height: 100px;
+    position: relative;
+    top: 10px;
+    transition: 1s;
+  }
+
+
   .navbar-links {
     display: flex;
     align-items: center;
@@ -131,9 +164,28 @@
       justify-content: space-between;
       padding: 10px 20px;
       padding-left: 2%;
+      transition: 1s;
       color:white;
       position: relative;
-      font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+      font-family: 'Omnes', sans-serif;
+
+    }
+
+    .navbartransparent {
+
+      /* transition: 1s;
+      padding: 10px 20px;
+      padding-left: 2%; */
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      padding-left: 2%;
+      transition: 1s;
+      color:white;
+      position: relative;
+      font-family: 'Omnes', sans-serif;
 
     }
     
@@ -141,8 +193,8 @@
   
   @media (max-width: 980px) {
     .navbar {
-      padding: 0;
-      left: 0;
+      /* padding: 0;
+      left: 0; */
 
     }
 
@@ -207,6 +259,14 @@
     }
 
     .imgresp{
+      position: relative;
+      left: 60px;
+      z-index: 1000;
+    }
+
+    .imgrespScroll{
+      /* height: 100px !important;
+      z-index: 1000; */
       position: relative;
       left: 60px;
       z-index: 1000;

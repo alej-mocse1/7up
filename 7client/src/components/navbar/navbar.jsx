@@ -67,15 +67,29 @@ const Navbar = () => {
   };
 
 
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 200);      
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  
+  }, []);
+
+
+
+  
   return (
-    <div className={styles.navbar}>
+    <div className={!isScrolled ? styles.navbar : styles.navbartransparent }>
       <div className={styles["navbar-logo"]}>
       <Link to="/">
         <img
           src={Logo}
           alt="7UP Logo"
-          className={styles.imgresp}
+          className={!isScrolled ? styles.imgresp : styles.imgrespScroll}
         />
         </Link>
       </div>

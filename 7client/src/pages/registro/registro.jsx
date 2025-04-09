@@ -270,7 +270,7 @@ const Registro = () => {
     return( 
         <div className={styles.Fondo}>
             <Navbar></Navbar>
-               
+            <div style={{height:"160px" , backgroundColor:"#32ab56"}} className='divSpac'></div>
             <div className={styles.container}>
                 <h1 className={styles.title}>
                     <img src={iniImg} alt="iniImg" className={styles.titleImg} />
