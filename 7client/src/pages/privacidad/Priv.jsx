@@ -82,7 +82,7 @@ const Priv = () => {
 
      
     <div className={styles.containerFooter} style={{marginTop:"-150px", backgroundColor:"white"}} >
-      <div style={{height:"100px"}}></div>
+      <div className={styles.margenFoter}></div>
       <Footer></Footer>     
     </div> 
 

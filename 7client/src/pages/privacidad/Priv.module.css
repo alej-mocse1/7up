@@ -140,12 +140,27 @@
       }
       
     }
-  
     @media (max-width: 768px) {
+
+
+      .containImg{
+        /* display: none; */
+        position: relative;
+        top: 100px;
   
+      }
   
       .containImg{
-        display: none;
+        top: 0;
+        left: 0%;
+        text-align: center;
+      }
+  
+      .porductosImg{
+  
+        position: relative;
+        top: 80px;
+  
       }
     
       .containImg2{
@@ -168,7 +183,38 @@
       }
   
       .container {
-          padding-bottom: 60px;
+          padding-bottom: 100px;
       }
+  
+      .container2 {
+        max-height: 100vh;
+    }
+  
+    .containImg{
+      /* display: none; */
+      top: 100px;
+      background-color: transparent;
+    }
+  
+    .porductosImg{
+      width: 75%;
+     }
+    .container2 h1{
+      font-family: 'Omnes', sans-serif !important; /* Usa 'sans-serif' como respaldo */
+      letter-spacing: 1.4px !important;
+      font-size: 23px;
+    }
+  
+    .container2 p{
+      font-family: 'Omnes', sans-serif !important; /* Usa 'sans-serif' como respaldo */
+      letter-spacing: 1.4px !important;
+      font-size: 18px;
+    }
       
+  
+    
+  .margenFoter{
+    height: 300px;
+  }
+  
     }

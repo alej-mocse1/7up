@@ -177,6 +177,9 @@ const TyC = () => {
 
 
     </div>
+
+
+    
     <h1 className={styles.containImg} style={{marginTop:"-350px", backgroundColor:"#32ab56"}}  >
         <img src={ProductosImg} alt="ProductosImg" className={styles.porductosImg} />
      </h1>
@@ -196,7 +199,7 @@ const TyC = () => {
      </h1>
 
     <div className={styles.containerFooter} style={{marginTop:"-150px", backgroundColor:"white"}} >
-      <div style={{height:"100px"}}></div>
+      <div className={styles.margenFoter}></div>
       <Footer></Footer>     
     </div> 
 
