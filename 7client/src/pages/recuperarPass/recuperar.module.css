@@ -8,12 +8,13 @@
 
 .container{
     margin-top: 100px;
+    font-family:  Arial,sans-serif !important;
 }
 
 .title {
     font-size: 24px;
     font-weight: bold;
-    color: #32ab56;
+    color: #ffffff;
     margin-bottom: 20px;
     text-align: center;
   }
@@ -21,6 +22,7 @@
   .title h1 {
     color: white;
     font-size: 100px;
+
   }
 
 
@@ -54,16 +56,12 @@
 }
 
 .a{
-    margin-top: 50px;
-    font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
-    letter-spacing: 1.4px;
+  letter-spacing: 1.4px;
     margin-left: 5px;
 }
 
 .p{
-  margin-top: 40px;
-  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
-  letter-spacing: 1.4px;
+ letter-spacing: 1.4px;
   color: white;
   font-size: 24px;
 }
@@ -123,7 +121,9 @@
      /* position: relative;
      right: 30px;
      width: 200px; */
-     width: 100%;
+     position: relative;
+     right:30px;     
+     width: 65%;
   }
 
   .title {
@@ -132,7 +132,7 @@
   }
 
   .titleImg{
-    width: 90%;
+    width: 75%;
   } 
 
   .p{
@@ -142,7 +142,7 @@
 
   .productosImg{
     position: relative;
-    left: 0;
+   
   
   }
   
