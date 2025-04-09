@@ -49,7 +49,10 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra elegante */
   }
 
-  
+  .containImg{
+    width: 140px;
+    text-align: center;
+  }
   .imgresp {
     height: 140px;
     position: relative;
@@ -293,6 +296,12 @@
 
     .menu-toggle img {
       width: 35px;
+    }
+
+    .containImg{
+      width: auto;
+      text-align: center;
+  
     }
 
     .imgresp{
