@@ -211,7 +211,7 @@ const RecuperarPass = () => {
             <div className={styles.container}>
                 <h1 className={styles.title}>
                     {/* <img src={iniImg} alt="iniImg" className={styles.titleImg} /> */}
-                   <p>
+                   <p style={{fontWeight:"400"}}>
                    Crea una nueva contraseña
                    y haz clic en el botón
                    </p>
