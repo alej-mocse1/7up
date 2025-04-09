@@ -153,6 +153,12 @@
     width: 75%;
   } 
 
+  .titleImg2{
+    width: 65%;
+    position: relative;
+  }
+  
+
   .p{
     padding: 20px;
   }
