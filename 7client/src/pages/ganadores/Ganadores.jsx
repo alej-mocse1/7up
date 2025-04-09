@@ -27,7 +27,9 @@ const Ganadores = () => {
         <div className={styles.navbarStyles}>
               <Navbar></Navbar>
               <div style={{height:"160px" , backgroundColor:"#32ab56"}} className='divSpac'></div>
+
         </div> 
+
         <div className={styles.container2}>
             <h1 className={styles.title}>
                 <img src={title} alt="title" className={styles.titleImg} />
