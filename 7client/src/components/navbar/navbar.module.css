@@ -193,6 +193,7 @@
       padding: 10px 20px;
       padding-left: 2%;
       padding-right: 6%;
+      padding-top: 0px;
       color:white;
       font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
       z-index: 1000;
@@ -213,6 +214,7 @@
       padding: 10px 20px;
       padding-left: 2%;
       padding-right: 6%;
+      padding-top: 0px;
       color:white;
       font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
       z-index: 1000;
@@ -301,20 +303,23 @@
     .containImg{
       width: auto;
       text-align: center;
+      padding-left: 25px;
   
     }
 
     .imgresp{
       position: relative;
-      left: 60px;
+      left: 0px;
+      right: 100px;
       z-index: 1000;
+      height: 120px !important;
     }
 
     .imgrespScroll{
-      height: 100px !important;
+      height: 80px !important;
       z-index: 1000;
       position: relative;
-      left: 60px;
+      left: 0px;
     }
   
     .navbar-links a {

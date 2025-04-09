@@ -16,7 +16,6 @@
       color: #333;
       line-height: 1.6;
       padding-bottom: 300px;
-      border: 1px solid black;
     }
 
 
@@ -128,6 +127,12 @@
     .ballon1zq{
       width: 80%;
     }
+
+        
+  .margenFoter{
+    height: 150px;
+  }
+  
   
   
     @media (min-width: 1600px) {
