@@ -270,7 +270,7 @@
     width: 90%;
     height: auto;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 0;
 }
 
@@ -322,11 +322,13 @@
 
 
   .titleImg{
-    width: 90%;
+    width: 55%;
   } 
 
   .titleImg2{
     width: 90%;
+    position: relative;
+    right: 10px;
   } 
 
 
@@ -335,8 +337,118 @@
     right: 90px;
     width: 290px;
     top: -80px; */
-    width: 100%;
+    width: 75%;
+    top: -250px;
  }
+ .contentUserData{
+  position: relative;
+  right: 5px;
 
+}
+
+.datosVucherDiv{
+  width: 72.5%;
+  position: relative;
+  right: 3px;
+  
+}
+
+/* 
+.datosUser {
+  padding-left: 0;
+} */
+
+
+.datosUser h1{
+  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+  letter-spacing: 1.4px;
+  font-size: 60px;
+  position: relative;
+  top: -30px;
+ text-align: center;
+ padding-right: 65px;
+}
+
+.datosUser .p1{
+  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+  letter-spacing: 1.4px;
+  font-size: 22px;
+  position: relative;
+  top: -60px;
+  text-align: center;
+  padding-right: 65px;
+}
+
+.datosUser .p2{
+  font-family: 'Omnes', sans-serif; /* Usa 'sans-serif' como respaldo */
+  letter-spacing: 1.4px;
+  font-size: 22px;
+  position: relative;
+  top: -30px;
+  text-align: center;
+  padding-right: 65px;
+}
+
+
+
+
+.datosImg{
+  height: 100%;
+  width: 85%;
+  background-color: white;
+  border-radius: 50px;
+  text-align: left;
+  padding: 30px;
+  padding-top: 45px;
+  padding-left: 45px;
+  position: relative;
+  top: 5px;
+  text-align: center;
+  position: relative;
+  top: -10px;
+}
+
+.datosImg h1{
+  font-size: 50px;
+  position: relative;
+  top: -55px;
+  padding-right: 0;
+  text-align: center;
+}
+
+.datosImg p{
+  font-size: 55px;
+  font-size: 22px;
+  position: relative;
+  top: -90px;
+}
+
+
+.containImgs{
+  width: 90%;
+  max-width: 600px;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  position: relative;
+  top: -20px;
+  right: 6px;
+  height: 200px;
+}
+
+.container{
+  height: 200vh;
+
+}
+
+.containerFooter{
+  margin-top: -40vh;
+  padding-top: 100px;
+  background-color: white;
+}
 
 }
