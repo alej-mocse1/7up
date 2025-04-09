@@ -116,10 +116,10 @@
   }
 
   .productosImg{
-     /* position: relative;
-     right: 30px;
-     width: 200px; */
-     width: 100%;
+     position: relative;
+     right: 20px;
+     width: 75%;
+     top: -50px;
   }
 
   .title {
@@ -128,17 +128,18 @@
   }
 
   .titleImg{
-    width: 90%;
+    width: 75%;
   } 
 
   .p{
     padding: 20px;
+    margin-top: -15px;
   }
   
 
   .productosImg{
     position: relative;
-    left: 0;
+
   
   }
   
