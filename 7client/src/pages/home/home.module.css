@@ -103,7 +103,7 @@
   @keyframes fadeDownRight {
     0% {
       opacity: 0;
-      transform: translate(-120px, -120px);
+      transform: translate(-120px, -150px);
     }
     100% {
       opacity: 1;
@@ -112,13 +112,14 @@
   }
   
   .fadeDownRight {
-    animation: fadeDownRight 1s ease-out forwards;
+    animation: fadeDownRight 2s ease-out forwards;
   }
 
   .hiddenBeforeInView {
-    opacity: 0;
-    transform: translate(-120px, -120px);
-  }
+  /* opacity: 0;
+  transform: translate(-150px, -150px);
+  transition: 1s */
+}
 
 @media (max-width: 700px) {
     .homeBackground{

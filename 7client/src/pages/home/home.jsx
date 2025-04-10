@@ -22,7 +22,7 @@ const Home = () => {
   const size = useWindowSize();
   const isMobile = size.width < 1023;
   const { ref, inView } = useInView({
-    triggerOnce: true, // solo una vez
+    triggerOnce: true ,
     threshold: 0.2,    // porcentaje visible para activar (20%)
   });
 
@@ -77,8 +77,7 @@ const Home = () => {
         />
 
 
-
-
+                        
 
         <img
           src={baloonImg}
@@ -106,22 +105,12 @@ const Home = () => {
 
 
 
-        {/* {!isMobile ? <div
-          data-aos="fade-down-right"
-          className={styles.divAnimation}
-        > */}
-        
           <img
              ref={ref}
             src={porductosImg}
             className={`${styles.porductosImg} ${inView ? styles.fadeDownRight : styles.hiddenBeforeInView}`}
-            // data-aos="fade-down-right"
-          />
-        {/* </div> : <img
-          src={porductosImg}
-          className={styles.porductosImg}
-        />} */}
 
+          />
 
       </div>
 
