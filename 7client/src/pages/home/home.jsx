@@ -96,11 +96,11 @@ const Home = () => {
         />
 
 
-
+      
         <img
           src={porductosImg}
           className={styles.porductosImg}
-          data-aos="fade-down"
+           data-aos="zoom-in"
         />
 
 
