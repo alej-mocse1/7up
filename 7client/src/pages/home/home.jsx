@@ -10,6 +10,7 @@ import Footer from "../../components/footer/footer";
 import Navbar from "../../components/navbar/navbar";
 import usePageTracking from "../../hooks/useGa";
 import { useWindowSize } from "../../hooks/useWindow";
+import { useInView } from "react-intersection-observer";
 
 ///importamos las animaciones 
 import { Zoom } from "react-awesome-reveal";
@@ -20,6 +21,11 @@ const Home = () => {
   usePageTracking()
   const size = useWindowSize();
   const isMobile = size.width < 1023;
+  const { ref, inView } = useInView({
+    triggerOnce: true, // solo una vez
+    threshold: 0.2,    // porcentaje visible para activar (20%)
+  });
+
 
   ///animaciones con AOS
   useEffect(() => {
@@ -104,10 +110,12 @@ const Home = () => {
           data-aos="fade-down-right"
           className={styles.divAnimation}
         > */}
+        
           <img
+             ref={ref}
             src={porductosImg}
-            className={styles.porductosImg}
-            data-aos="fade-down-right"
+            className={`${styles.porductosImg} ${inView ? styles.fadeDownRight : styles.hiddenBeforeInView}`}
+            // data-aos="fade-down-right"
           />
         {/* </div> : <img
           src={porductosImg}
