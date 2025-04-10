@@ -87,9 +87,9 @@
 
   .divRelative{
     position: relative;
-    height: 600px;
+    height: 400px;
     width: 100%;
-    top: -22vh;
+    top: -11vh;
   }
 
 
