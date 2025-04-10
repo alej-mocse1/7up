@@ -84,13 +84,13 @@
   .premiosImg2{
     display: none;
   }
-
+/* 
   .divRelative{
     position: relative;
     height: 400px;
     width: 100%;
     top: -11vh;
-  }
+  } */
 
 
 @media (max-width: 700px) {
@@ -157,15 +157,14 @@
     }
 
 
-    .porductosImg{
+    /* .porductosImg{
         width: 70%;
         height: auto;
         position: absolute;
-        /* bottom: -300; */
         left: 40px;
         bottom: -110px;
         
     }
-
+ */
 
   }

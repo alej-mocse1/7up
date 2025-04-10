@@ -97,20 +97,20 @@ const Home = () => {
 
 
       
-        <div  
+        {/* <div  
          className={styles.divRelative}
            data-aos="fade-right"
-        >
+        > */}
           <img
             src={porductosImg}
             className={styles.porductosImg}
-         
+           data-aos="fade-right"
             style={{ position: "absolute", bottom: "0" }}
           />
         </div>
 
-
-      </div>
+{/* 
+      </div> */}
 
 
 
