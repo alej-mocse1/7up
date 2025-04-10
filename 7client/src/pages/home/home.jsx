@@ -99,7 +99,7 @@ const Home = () => {
       
         <div  
          className={styles.divRelative}
-         data-aos="zoom-in"
+           data-aos="fade-right"
         >
           <img
             src={porductosImg}
