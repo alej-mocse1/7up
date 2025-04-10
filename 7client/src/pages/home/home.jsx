@@ -24,9 +24,6 @@ const Home = () => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  useEffect(() => {
-    AOS.refresh(); // fuerza que AOS vuelva a calcular las posiciones
-  }, []);
 
   useEffect(() => {
     const sectionId = localStorage.getItem('scrollTo');
@@ -102,7 +99,7 @@ const Home = () => {
 
       
        <div  
-           data-aos="fade-right"
+           data-aos="fade-down-right"
            className={styles.divAnimation}
         > 
           <img
