@@ -22,8 +22,8 @@ const Home = () => {
   const size = useWindowSize();
   const isMobile = size.width < 1023;
   const { ref, inView } = useInView({
-    triggerOnce: true ,
-    threshold: 0.2,    // porcentaje visible para activar (20%)
+    triggerOnce: false, // queremos que se repita
+    threshold: 0.7,    // porcentaje visible para activar (20%)
   });
 
 
@@ -104,13 +104,11 @@ const Home = () => {
         />
 
 
-
-          <img
-             ref={ref}
-            src={porductosImg}
-            className={`${styles.porductosImg} ${inView ? styles.fadeDownRight : styles.hiddenBeforeInView}`}
-
-          />
+<img
+  ref={ref}
+  src={porductosImg}
+  className={`${styles.porductosImg} ${inView ? styles.fadeDownRight : ''}`}
+/>
 
       </div>
 
