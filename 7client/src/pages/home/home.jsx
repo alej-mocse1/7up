@@ -100,7 +100,7 @@ const Home = () => {
         <img
           src={porductosImg}
           className={styles.porductosImg}
-          data-aos="zoom-in"
+          data-aos="fade-right"
         />
 
 
