@@ -112,7 +112,7 @@
   }
   
   .fadeDownRight {
-    animation: fadeDownRight 2s ease-out forwards;
+    animation: fadeDownRight 1s ease-out forwards;
   }
 
   .hiddenBeforeInView {
