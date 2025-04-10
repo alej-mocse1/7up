@@ -93,22 +93,11 @@
   } */
 
 
-  .divAnimation{
+  /* .divAnimation{
     margin-bottom: 30px;
     height: 250px;
-  }
+  } */
 
-  @media (max-width: 1600px) { 
-
-   .divAnimation{
-        margin-bottom: 30px;
-        height: auto;
-        border: 1px solid black;
-        padding-top: 340px;
-    } 
-    
-  
-  }
 
 @media (max-width: 700px) {
     .homeBackground{

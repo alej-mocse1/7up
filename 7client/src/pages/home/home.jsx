@@ -100,18 +100,19 @@ const Home = () => {
 
 
 
-        {!isMobile ? <div
+        {/* {!isMobile ? <div
           data-aos="fade-down-right"
           className={styles.divAnimation}
-        >
+        > */}
           <img
             src={porductosImg}
             className={styles.porductosImg}
+            data-aos="fade-down-right"
           />
-        </div> : <img
+        {/* </div> : <img
           src={porductosImg}
           className={styles.porductosImg}
-        />}
+        />} */}
 
 
       </div>
