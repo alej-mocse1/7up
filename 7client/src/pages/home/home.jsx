@@ -61,49 +61,49 @@ const Home = () => {
       <div className={styles.secondSection} id="mec">
 
 
-      <img
-            data-aos="zoom-in"
-            src={paricipaImg}
-            className={styles.participaImg}
-          />
- 
-
-     
+        <img
+          data-aos="zoom-in"
+          src={paricipaImg}
+          className={styles.participaImg}
+        />
 
 
-          <img
-            src={baloonImg}
-            className={styles.baloonImg}
-             data-aos="zoom-in"
-          />
-    
+
+
+
+        <img
+          src={baloonImg}
+          className={styles.baloonImg}
+          data-aos="zoom-in"
+        />
+
         <div id="premios" style={{ position: "relative", top: "-100px" }}></div>
 
 
-          <img
-            src={premiosImg}
-            className={styles.premiosImg}
-             data-aos="zoom-in"
+        <img
+          src={premiosImg}
+          className={styles.premiosImg}
+          data-aos="zoom-in"
 
-          />
-
-
-
-          <img
-            src={premios_m}
-            className={styles.premiosImg2}
- data-aos="zoom-in"
-          />
- 
+        />
 
 
-          <img
-           data-aos="zoom-in"
-            src={porductosImg}
-            className={styles.porductosImg}
-          />
 
-   
+        <img
+          src={premios_m}
+          className={styles.premiosImg2}
+          data-aos="zoom-in"
+        />
+
+
+
+        <img
+          src={porductosImg}
+          className={styles.porductosImg}
+          data-aos="zoom-in"
+        />
+
+
       </div>
 
 
