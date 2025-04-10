@@ -25,6 +25,10 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
+    AOS.refresh(); // fuerza que AOS vuelva a calcular las posiciones
+  }, []);
+
+  useEffect(() => {
     const sectionId = localStorage.getItem('scrollTo');
     if (sectionId) {
       const scrollTo = () => {
@@ -104,8 +108,8 @@ const Home = () => {
           <img
             src={porductosImg}
             className={styles.porductosImg}
-           data-aos="fade-right"
-            style={{ position: "absolute", bottom: "0" }}
+            data-aos="fade-right"
+        
           />
         </div>
 
