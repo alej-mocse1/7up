@@ -67,11 +67,11 @@
 }
 
 .porductosImg{
-    width: 30%;
+    width: 27%;
     height: auto;
     position: absolute;
     bottom: -80px;
-    left:8%;
+    left: 10%;
 }
 
 .containerFooter{
@@ -83,6 +83,13 @@
 
   .premiosImg2{
     display: none;
+  }
+
+  .divRelative{
+    position: relative;
+    height: 600px;
+    width: 100%;
+    top: -20vh;
   }
 
 
@@ -159,7 +166,6 @@
         bottom: -110px;
         
     }
-
 
 
   }

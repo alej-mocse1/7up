@@ -97,11 +97,17 @@ const Home = () => {
 
 
       
-        <img
-          src={porductosImg}
-          className={styles.porductosImg}
-           data-aos="zoom-in"
-        />
+        <div  
+         className={styles.divRelative}
+         data-aos="zoom-in"
+        >
+          <img
+            src={porductosImg}
+            className={styles.porductosImg}
+         
+            style={{ position: "absolute", bottom: "0" }}
+          />
+        </div>
 
 
       </div>
