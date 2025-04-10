@@ -103,14 +103,11 @@ const Home = () => {
       
        <div  
            data-aos="fade-right"
-           style={{marginBottom:"30px", height:"340px"}}
-           
+           className={styles.divAnimation}
         > 
           <img
             src={porductosImg}
-            className={styles.porductosImg}
-            data-aos="fade-right"
-        
+            className={styles.porductosImg}  
           />
         </div>
 

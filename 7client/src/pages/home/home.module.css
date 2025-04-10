@@ -93,6 +93,21 @@
   } */
 
 
+  .divAnimation{
+    margin-bottom: 30px;
+    height: 250px;
+  }
+
+  @media (max-width: 1600px) { 
+
+    .divAnimation{
+        margin-bottom: 30px;
+        height: 340px;
+    }
+    
+  
+  }
+
 @media (max-width: 700px) {
     .homeBackground{
         height: 100vh; 
