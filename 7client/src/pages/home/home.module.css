@@ -100,10 +100,12 @@
 
   @media (max-width: 1600px) { 
 
-    .divAnimation{
+   .divAnimation{
         margin-bottom: 30px;
-        height: 340px;
-    }
+        height: auto;
+        border: 1px solid black;
+        padding-top: 340px;
+    } 
     
   
   }
