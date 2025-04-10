@@ -21,7 +21,7 @@ const Home = () => {
 
   ///animaciones con AOS
   useEffect(() => {
-    AOS.init({ duration: 1100 });
+    AOS.init({ duration: 1000 });
   }, []);
 
   useEffect(() => {
