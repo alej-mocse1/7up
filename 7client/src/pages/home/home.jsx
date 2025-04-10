@@ -9,6 +9,7 @@ import porductosImg from "../../assets/productos.png";
 import Footer from "../../components/footer/footer";
 import Navbar from "../../components/navbar/navbar";
 import usePageTracking from "../../hooks/useGa";
+import { useWindowSize } from "../../hooks/useWindow";
 
 ///importamos las animaciones 
 import { Zoom } from "react-awesome-reveal";
@@ -17,7 +18,8 @@ import 'aos/dist/aos.css';
 
 const Home = () => {
   usePageTracking()
-
+  const size = useWindowSize();
+  const isMobile = size.width < 1023;
 
   ///animaciones con AOS
   useEffect(() => {
@@ -97,19 +99,22 @@ const Home = () => {
         />
 
 
-      
-       <div  
-           data-aos="fade-down-right"
-           className={styles.divAnimation}
-        > 
+
+        {!isMobile ? <div
+          data-aos="fade-down-right"
+          className={styles.divAnimation}
+        >
           <img
             src={porductosImg}
-            className={styles.porductosImg}  
+            className={styles.porductosImg}
           />
-        </div>
+        </div> : <img
+          src={porductosImg}
+          className={styles.porductosImg}
+        />}
 
 
-      </div> 
+      </div>
 
 
 
