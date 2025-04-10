@@ -101,10 +101,11 @@ const Home = () => {
 
 
       
-        {/* <div  
-         className={styles.divRelative}
+       <div  
            data-aos="fade-right"
-        > */}
+           style={{marginBottom:"30px", height:"340px"}}
+           
+        > 
           <img
             src={porductosImg}
             className={styles.porductosImg}
@@ -113,8 +114,8 @@ const Home = () => {
           />
         </div>
 
-{/* 
-      </div> */}
+
+      </div> 
 
 
 
