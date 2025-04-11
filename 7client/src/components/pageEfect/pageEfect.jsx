@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from "react";
-import "./PageEntrance.css"; // Agrega los estilos aquí
+import { useLocation } from "react-router-dom";
+import "./PageEntrance.css";
 
 const PageEntrance = ({ children }) => {
+  const location = useLocation();
   const [isAnimating, setIsAnimating] = useState(true);
 
   useEffect(() => {
+    setIsAnimating(true);
     const timer = setTimeout(() => {
       setIsAnimating(false);
-    }, 1500); // Duración de la animación
+    }, 1); // Duración de la animación total
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [location.pathname]); // Se ejecuta en cada cambio de ruta
 
   return (
     <div className="page-container">
       {isAnimating && (
         <>
           <div className="curtain left"></div>
-            {/* <div className="imgCentral">
-              <h1>soy la imagen</h1>
-            </div> */}
           <div className="curtain right"></div>
         </>
       )}
