@@ -10,9 +10,15 @@ const PageEntrance = ({ children }) => {
     setIsAnimating(true);
     const timer = setTimeout(() => {
       setIsAnimating(false);
-    }, 1); // Duración de la animación total
+    }, 100); // Duración de la animación total
 
-    return () => clearTimeout(timer);
+
+    console.log("se ejcuta el componente animacion");
+    
+    return () => { 
+      setIsAnimating(false)
+      clearTimeout(timer);
+     }
   }, [location.pathname]); // Se ejecuta en cada cambio de ruta
 
   return (
