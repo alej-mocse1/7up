@@ -17,9 +17,9 @@ const PageEntrance = ({ children }) => {
       {isAnimating && (
         <>
           <div className="curtain left"></div>
-            <div className="imgCentral">
+            {/* <div className="imgCentral">
               <h1>soy la imagen</h1>
-            </div>
+            </div> */}
           <div className="curtain right"></div>
         </>
       )}
