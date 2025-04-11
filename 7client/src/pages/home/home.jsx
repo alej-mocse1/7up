@@ -77,7 +77,7 @@ const Home = () => {
         />
 
 
-                        
+
 
         <img
           src={baloonImg}
@@ -104,11 +104,11 @@ const Home = () => {
         />
 
 
-<img
-  ref={ref}
-  src={porductosImg}
-  className={`${styles.porductosImg} ${inView ? styles.fadeDownRight : ''}`}
-/>
+        <img
+          ref={ref}
+          src={porductosImg}
+          className={`${styles.porductosImg} ${inView ? styles.fadeDownRight : ''}`}
+        />
 
       </div>
 
